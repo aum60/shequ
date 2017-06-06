@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>兴趣社区</title>
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/170515/index.css">
+</head>
+<body class="ina_f0f0f0">
+<div class="ina_top">
+    <div class="ina_silde">
+        <div class="ina_top_left">
+            <img src="http://img.news18a.com/community/image/logo.png">
+            <a href="#">首页</a>
+            <a href="#">精华</a>
+            <a href="#">活动</a>
+            <a href="#">热门排行</a>
+        </div>
+        <div class="ina_top_right">
+            <div class="ina_search">
+                <input placeholder="搜索文章，帖子，用户">
+                <a href="#"><i class="ina_icon"></i></a>
+            </div>
+            <p>
+                <a class="ina_icon ina_top_message" href="javascript:;"><!--<i>登录无消息的时候i标签不展示</i>--></a>
+                <span>田豆豆</span>
+                <a href="#">退出</a>
+                <em>|</em>
+                <a href="#" class="ina_red">个人中心</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="ina_silde">
+    <div class="ina_perfect">
+        <div class="ina_perfect_top">
+            <div class="ina_perfect_bt"><h3>完善信息</h3></div>
+            <p>Hi，新朋友，完善以下内容，让车友们更方便找到和关注你。</p>
+        </div>
+        <div class="ina_perfect_bottom">
+            <ul>
+                <li>
+                    <label class="ina_name">上传头像</label>
+                    <div class="ina_file"><img src="http://img.news18a.com/community/image/women.png"><input type="file"></div>
+                </li>
+                <li>
+                    <label>性别</label>
+                    <span class="ina_sex"><b><i></i></b>男</span>
+                    <span class="ina_sex ina_cur"><b><i></i></b>女</span>
+                </li>
+                <li>
+                    <label>用户名</label>
+                    <input type="text" placeholder="我要起个帅气的名字(⊙o⊙)…">
+                </li>
+                <li>
+                    <label>星座</label>
+                    <select>
+                        <option value="处女座">处女座</option>
+                        <option value="水平座">水平座</option>
+                        <option value="天秤座">天秤座</option>
+                        <option value="射手座">射手座</option>
+                        <option value="双子座">双子座</option>
+                        <option value="金牛座">金牛座</option>
+                        <option value="巨蟹座">巨蟹座</option>
+                        <option value="天蝎座">天蝎座</option>
+                        <option value="狮子座">狮子座</option>
+                        <option value="白羊座">白羊座</option>
+                        <option value="摩羯座">摩羯座</option>
+                        <option value="双鱼座">双鱼座</option>
+                    </select>
+                </li>
+                <li>
+                    <label>省份</label>
+                    <select class="ina_select_120" id="province"><option value="-1">请选择省份</option></select>
+                    <label>城市</label>
+                    <select class="ina_select_120" id="city"><option value="-1">请选择城市</option></select>
+                </li>
+                <li>
+                    <label>兴趣</label>
+                    <div class="ina_xingqu">
+                        <span class="ina_cur">汽车/摩托</span>
+                        <span class="ina_cur">时尚/生活</span>
+                        <span>奢侈/享受</span>
+                        <span>女性/爱美</span>
+                        <span>美食/烹饪</span>
+                        <span>科技/智能</span>
+                        <span>运动/健身</span>
+                        <span>户外/极限</span>
+                        <span>模型/道具</span>
+                    </div>
+                </li>
+                <li>
+                    <label>个人简介</label>
+                    <textarea placeholder="写点啥好呢？(⊙o⊙)…" id="ina_textarea"></textarea>
+                    <p>还可以输入<b>200</b>个字符</p>
+                </li>
+                <li><label>&nbsp;</label><a href="javascript:;">确定</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="http://img.news18a.com/js/jquery-1.7.2.min.js"></script>
+<script>
+$(".ina_perfect .ina_perfect_bottom ul li .ina_sex").click(function(){
+    $(this).addClass('ina_cur').siblings('.ina_sex').removeClass('ina_cur');
+});
+$(".ina_perfect .ina_perfect_bottom ul li .ina_xingqu span").click(function(){
+    $(this).toggleClass('ina_cur');
+});
+var element = document.getElementById("ina_textarea");
+if("\v"=="v") {
+     if(/msie/i.test(navigator.userAgent)){element.onpropertychange = myfun;}
+}else{
+     element.addEventListener("input",myfun,false);
+}
+function myfun(){
+    var val=element.value;
+    if(val.length>200){
+        $("#ina_textarea").val(val.substr(0,200));
+        return false;
+    }
+    else{
+        $("#ina_textarea").parents("li").find("p b").html(200-val.length);
+    }
+}
+</script>
+</body>
+</html>

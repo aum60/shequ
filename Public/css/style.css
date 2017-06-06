@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin: 0; padding: 0; font-size: 14px; text-decoration: none; color: #292929;}
+table{ border-collapse: collapse; border-color: #CCC;}
+td{ padding: 5px; border-color: #CCC;}
+ul,ul li{ list-style: none;}
+.clear{ clear: both;}
+#head{ width: 1100px; margin: 0 auto; border: 1px solid #CCC; height: 100px;}
+#head .nav{ float: left; width: 600px; }
+#head .nav a{ margin: 10px;}
+#head .search{ width: 300px; float: left;}
+#head .userinfo{ float: right;}
+.banner{ width: 1100px; height: 300px; border: 1px solid #CCC; margin: 10px auto 0;}
+#nav { width: 1100px; margin: 10px auto 0; border: 1px solid #CCC; padding-bottom: 10px;}
+#nav ul li{ border:1px solid #CCC;display: inline; float: left; width: 100px; margin: 10px 4px 0; text-align: center; height: 30px; line-height: 30px;}
+#main{ width: 1100px; margin: 10px auto 0; border: 1px solid #CCC;}
+.data ul li{  float: left; display: inline; width: 260px; overflow: hidden; margin: 10px 0 0 10px;}
+.data ul li img{ float: left; width:260px; height: 150px;}
+.data ul li a{ display: inline-block;  width: 260px;}
+.page{ margin-top: 10px; padding: 10px; border: 1px solid #CCC;}
+/*热门排行列表*/
+.hot_nav{ height: 30px; line-height: 30px; text-align: center;}
+.hot_nav a{ margin: 0 30px;}
+.data_list ul{ width: 512px; float: left; border:1px solid #000; display: inline; margin: 10px 0 0 10px; padding: 10px;}
+.data_list ul li{ height: 50px;}
+.data_list ul li img{ float: left; width: 100px; height: 40px;}
+/*热门排行列表*/
+/*帖子内页*/
+.content_title{ line-height: 20px; padding: 10px;}
+.content{ padding: 10px; line-height: 30px;}
+.content p{ line-height: 30px;}
+.comment_list{ padding: 10px;}
+.ccom_list{ padding: 10px;}
+.left{ width: 800px; float: left;}
+.right{ width: 280px; float: right;}
+.comm_left{ float: left; width: 100px;}
+.comm_right{ float: left; width: 625px;}
+/*帖子内页*/
+#footer{ width: 1100px; margin: 10px auto 0; border: 1px solid #CCC; height: 50px; line-height: 50px; text-align: center;}

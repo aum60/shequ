@@ -1,0 +1,18 @@
+<dl>
+    <dt>
+        <a href="__APP__/Index/show/id/<{$vo.id}>"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$vo.cover2}>">
+            <div class="ina_list_bottom">
+                <div class="ina_photo"><a href="__APP__/Ucenter/uspace/uid/<{$vo.uid}>"><img src="<{$vo.picture_path}>"><{$vo.username}></a></div>
+                <p><span><i class="ina_icon ina_read"></i><{$vo.scan}></span><span><i class="ina_icon ina_message"></i><{$vo.pl_num}></span><span><i class="ina_icon ina_roar"></i><{$vo.znum}></span></p>
+            </div>
+        </a>
+        <{if $vo.isbest}><em></em><{/if}>
+    </dt>
+    <dd>
+        <h3><a href="__APP__/Index/show/id/<{$vo.id}>"><{$vo.title}></a></h3>
+        <div class="ina_label">
+            <span class="ina_label<{$vo.class_num}>"><{$vo.class_name}></span>
+            <p><i class="ina_icon"></i><{$vo.addtime}></p>
+        </div>
+    </dd>
+</dl>

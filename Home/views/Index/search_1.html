@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>搜索页面</title>
+        <script src="static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+        <style type="text/css">
+            *{ margin: 0; padding: 0; font-size: 14px; text-decoration: none; color: #292929;}
+            #head{ width: 1100px; height: 70px; margin: 0 auto; position: relative; border: 1px solid #000;}
+            table{ border-collapse: collapse; border-color: #CCC;}
+            td{ padding: 5px; border-color: #CCC;}
+            ul,ul li{ list-style: none;}
+            .clear{ clear: both;}
+            #main{ width: 1100px; margin: 10px auto 0; border: 1px solid #000;}
+            #nav ul li{ border:1px solid #CCC;display: inline; float: left; width: 100px; margin: 10px 4px 0; text-align: center; height: 30px; line-height: 30px;}
+            .data ul li{ margin: 10px 0 0 10px; border: 1px solid #000;}
+            #login_show{ width: 500px; border: 1px solid #000; position: absolute; left: 0; top: 100px; z-index: 999999; background: #FFF; display: none;}
+            #login_show table{ margin: 0 auto; width: 100%; text-align: left;}
+            #password2_tr{ display: none;}
+            #banner{ height: 200px; border: 1px solid #000; margin: 10px auto; width: 1100px;}
+            #footer{ width: 1100px; margin: 10px auto 0; border: 1px solid #000; height: 50px; line-height: 50px; text-align: center;}
+        </style>
+    </head>
+
+    <body>
+        <{include file="../Public/head.html"}>
+        <!--end head-->
+
+        <div id="banner">
+            banner
+        </div>
+        <!--main-->
+        <div id="main">
+            <div id="nav">
+                <ul>
+                    <li><a href="__URL__/index2">最新</a></li>
+                    <{foreach $cat as $ty }>
+                    <li><a href="__URL__/index2/pid/<{$ty.id}>"><{$ty.name}></a></li>
+                    <{/foreach}>
+                    <li><a href="__APP__/Message/hot">热门排行</a></li>
+                    
+                </ul>
+                <div class="clear"></div>
+            </div>
+
+                <!--最新-->
+                <div class="data">
+                    <{if $list}>
+                    <ul>
+                        <{foreach $list as $v}>
+                        <li>
+                            <div>标题：<a href="__URL__/show/id/<{$v.id}>"><{$v.title}></a>&nbsp;&nbsp;作者：<a href='__URL__/mymess/uid/<{$v.user_id}>'><{$v.user_name}></a>&nbsp;&nbsp;点击量：<{$v.scan}>&nbsp;&nbsp;评论数：<{$v.num}></div>
+                            <div>内容:<{$v.content}></div>
+                        </li>
+                        <{/foreach}>
+                    </ul>
+                    <div class="clear"></div>
+                    <{$pageinfo}>
+                    <{else}>
+                    暂无数据
+                    <{/if}>
+                </div>
+        </div>
+        <!--end main-->
+        <{include file="../Public/foot.html"}>
+
+    </body>
+</html>

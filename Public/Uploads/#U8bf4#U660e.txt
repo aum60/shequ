@@ -1,0 +1,3 @@
+editor发帖内容图片文件夹
+users 个人头像
+cover发帖的封面图

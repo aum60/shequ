@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title><{$q}>-搜索-极趣</title>
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/index.css">
+</head>
+<body>
+<{include file="../Public/head.html"}>
+<div class="ina_silde">
+    <div class="ina_searchnr"><input value="<{$q}>" id="search_con_nav"><a id="search_nav" href="javascript:;;">搜索</a></div>
+    <script type="text/javascript">
+                    $(function () {
+                        $("#search_nav").click(function () {
+                            var search_con_nav = encodeURIComponent(encodeURIComponent($("#search_con_nav").val()));
+                            window.location.href = "__APP__/Index/search/q/" + search_con_nav;
+                        });
+
+                    });
+                </script>
+    <{if $q }><div class="ina_search_bt"><p>共<b><{$count}></b>篇原创帖子</p></div><{/if}>
+    <div class="ina_list">
+        <{if $list}>
+        <{foreach $list as $kye => $vo}>
+        <dl>
+            <dt><a href="__APP__/Index/show/id/<{$vo.id}>"><img src="<{$vo.cover2}>"></a>
+            <{if $vo.isbest}><em><i>精</i></em><{/if}>
+            </dt>
+            <dd>
+                <div class="ina_label">
+                    <span class="ina_label<{$vo.class_num}>"><{$vo.class_name}></span>
+                    <p><i class="ina_icon"></i><{$vo.addtime}></p>
+                </div>
+                <h3><a href="__APP__/Index/show/id/<{$vo.id}>"><{$vo.title}></a></h3>
+                <div class="ina_list_bottom">
+                    <div class="ina_photo"><a href="__APP__/Ucenter/uspace/uid/<{$vo.uid}>"><img src="<{$vo.picture_path}>"><{$vo.username}></a></div>
+                    <p><span><i class="ina_icon ina_read"></i><{$vo.scan}></span><span><i class="ina_icon ina_message"></i><{$vo.pl_num}></span><span><i class="ina_icon ina_roar"></i><{$vo.znum}></span></p>
+                </div>
+            </dd>
+        </dl>
+        <{/foreach}>
+        <{else}>
+        <div class="ina_search_no">
+            <img src="http://img.news18a.com/community/image/search.png">
+            <p>目前还没有<{if $q}>“<{$q}>”的<{/if}>相关帖子，<br>您可以去首发帖子留下历史首创足迹^_^</p>
+        </div>
+        <{/if}>
+    </div>
+    <div class="ina_page">
+        <!--<a href="#" class="ina_prev_next ina_gray"><</a><a href="javascript:;" class="ina_cur">1</a><a href="#">2</a><span>…</span><a href="#">14</a><a href="#">15</a><a href="#" class="ina_prev_next ina_red">></a><span>共15页</span><input><a href="#" class="ina_red">GO</a>-->
+        <{$pageinfo}>
+    </div>
+</div>
+<div class="ina_fixed"><a href="__APP__/Index/add"><img src="http://img.news18a.com/community/image/fatie.png"></a></div>
+<{include file="../Public/foot.html"}>
+</body>
+</html>

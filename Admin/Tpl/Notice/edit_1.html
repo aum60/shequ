@@ -1,0 +1,33 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/data_update/navTabId/listnotice/callbackType/closeCurrent" enctype="multipart/form-data"  class="pageForm required-validate" 
+		onsubmit="return iframeCallback(this,navTabAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+            <input type="hidden" name="id" value="<{$vo.id}>" />
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>轮播图描述：</dt>
+                                <dd><input type="text"  style="width:100%" name="title" value="<{$vo.title}>" /></dd>
+			</dl>
+                    <dl style="height: 100px;">
+				<dt>图片附件：</dt>
+				<dd>
+                                    <img src="__PUBLIC__/Uploads/cover/<{$vo.enclosure}>" height="50" />
+                                    <input type="file" name="enclosure" />
+				</dd>
+			</dl>
+		
+			<dl>
+				<dt>图片链接：</dt>
+                <dd><input type="text" style="width:100%" name="link" value="<{$vo.link}>" /></dd>		
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

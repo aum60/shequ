@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>极趣-精华</title>
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/index.css">
+</head>
+<body>
+<{include file="../Public/head.html"}>
+<!--<div class="ina_jinghua">
+    <div class="ina_silde">
+        <div class="ina_head"><img src="<{$tuijian.banner}>"></div>
+    </div>
+</div>-->
+<div class="ina_silde">
+    <div class="ina_dbt">
+        <span>共<{$count}>篇帖子</span>
+        <p><a href="__APP__/Index/boutique" <{if $order==''}>class="ina_cur"<{/if}>>最新发布</a><a href="__APP__/Index/boutique/order/click" <{if $order=='click'}>class="ina_cur"<{/if}>>点击最高</a><a href="__APP__/Index/boutique/order/comment" <{if $order=='comment'}>class="ina_cur"<{/if}>>评论最多</a></p>
+    </div>
+    <div class="ina_list">
+        <{foreach $list as $k => $vo}>
+        
+        <dl>
+            <dt><a href="__APP__/Index/show/id/<{$vo.id}>" target="_blank"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$vo.cover2}>" /></a>
+            <{if $vo.isbest}><em><i>精</i></em><{/if}>
+            </dt>
+            <dd>
+                <div class="ina_label">
+                    <{foreach $vo['class_name'] as $vvv}>
+                    <span class="ina_label<{$vvv.class_num}>"><{$vvv.class_name}></span>
+                    <{/foreach}>
+                    <p><i class="ina_icon"></i><{$vo.addtime}></p>
+                </div>
+                <h3><a href="__APP__/Index/show/id/<{$vo.id}>" target="_blank"><{$vo.title}></a></h3>
+                <div class="ina_list_bottom">
+                    <div class="ina_photo">
+                        <a href="__APP__/Ucenter/uspace/uid/<{$vo.uid}>" target="_blank">
+                            <img src="<{$vo.picture_path}>"><{$vo.username}>
+                        </a>
+                    </div>
+                    <p><span><i class="ina_icon ina_read"></i><{$vo.scan}></span><span><i class="ina_icon ina_message"></i><{$vo.pl_num}></span><span><i class="ina_icon ina_roar"></i><{$vo.znum}></span></p>
+                </div>
+            </dd>
+        </dl>
+
+        <{/foreach}>
+    </div>
+    <div class="ina_page">
+        <!--<a href="#" class="ina_prev_next ina_gray"><</a><a href="javascript:;" class="ina_cur">1</a><a href="#">2</a><span>…</span><a href="#">14</a><a href="#">15</a><a href="#" class="ina_prev_next ina_red">></a><span>共15页</span><input><a href="#" class="ina_red">GO</a>-->
+        <{$pageinfo}>
+    </div>
+</div>
+<div class="ina_fixed"><a href="__APP__/Index/add" target="_blank"><img src="http://img.news18a.com/community/image/fatie.png"></a></div>
+<script>
+    $("img").lazyload({effect:"fadeIn"});
+
+</script>
+<{include file="../Public/foot.html"}>
+</body>
+</html>

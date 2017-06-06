@@ -1,0 +1,31 @@
+<dl>
+    <dt><a href="__APP__/Ucenter/uspace/uid/<{$v['uid']}>" target="_blank"><img src="<{$v['picture_path']}>"></a></dt>
+    <dd>
+        <div class="ina_comment_top">
+            <h3><a href="__APP__/Ucenter/uspace/uid/<{$v['uid']}>" target="_blank"><{$v['username']}></a></h3>
+            <span class="ina_date"><{$v['addtime']}></span>
+            <p>
+                <span>
+                    <a href="javascript:;;"  class="ding" datas="<{$v['id']}>"><i style="font-style: normal; width: 15px;">顶</i><span class="znum" style="padding-left: 0px;"><{$v['pz']}></span></a></span><span><a href="javascript:;;" class="ina_huifu_a" pid="<{$v.id}>"><i class="ina_icon ina_huifu"></i></a>
+                </span>
+            </p>
+        </div>
+        <{if $v['history']}>
+        <ul>
+            <{foreach $v['history'] as $kk => $vv}>
+            <li>
+                <div class="ina_li_top">
+                    <h3><a href="__APP__/Ucenter/uspace/uid/<{$vv['uid']}>" target="_blank"><{$vv['username']}></a></h3>
+                    <p><span><a href="javascript:;;"  class="ding" datas="<{$vv['id']}>"><i style="font-style: normal; width: 15px;">顶</i><span class="znum" style="padding-left: 0px;"><{$vv['pz']}></span></a></span><span><a href="javascript:;;" class="ina_huifu_ra" pid ="<{$vv['id']}>"><i class="ina_icon ina_huifu"></i></a></span></p>
+                </div>
+                <div class="ina_linr">
+                    <{$vv['content']}>
+                </div>
+                <div class="ina_floor"><span><{$kk}>楼</span><i></i></div>
+            </li>
+            <{/foreach}>
+        </ul>
+        <{/if}>
+        <div class="ina_comment_bottom"><{$v.content}></div>
+    </dd>
+</dl>

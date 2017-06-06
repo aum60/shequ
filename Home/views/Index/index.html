@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>极趣-首页</title>
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/index.css">
+
+</head>
+<body>
+<{include file="../Public/head.html"}>
+<div class="ina_focus">
+    <div class="ina_silde">
+        <{if $row_list}>
+        <div class="ina_prev"><i class="ina_icon"></i></div>
+        <div class="ina_focusnr">
+            <{foreach $row_list as $v}>
+            <a href="<{$v.message_link}>" target="_blank"><img src="http://img.news18a.com/community/image/lazyload_750.jpg"  data-original="<{$v.cover2}>" /><span><{$v.title}></span></a>
+            <{/foreach}>
+        </div>
+        <div class="ina_next"><i class="ina_icon"></i></div>
+        <div class="ina_focus_tab">
+            <ul>
+                <{foreach $row_list as $v}>
+                <li><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$v.cover2}>"><span><{$v.title}></span></li>
+                <{/foreach}>
+            </ul>
+        </div>
+        <{else}>
+        <div class="ina_prev"><i class="ina_icon"></i></div>
+        <div class="ina_focusnr">
+            <a href="#"><img src="http://img.news18a.com/community/image/focus.jpg"><span>春节自驾游记录——全家总动员1</span></a>
+            <a href="#"><img src="http://img.news18a.com/community/image/focus.jpg"><span>春节自驾游记录——全家总动员2</span></a>
+            <a href="#"><img src="http://img.news18a.com/community/image/focus.jpg"><span>春节自驾游记录——全家总动员3</span></a>
+        </div>
+        <div class="ina_next"><i class="ina_icon"></i></div>
+        <div class="ina_focus_tab">
+            <ul>
+                <li><img src="http://img2.news18a.com/site/other/201703/ina_14883270101083114198.jpg"></li>
+                <li><img src="http://img2.news18a.com/site/other/201703/ina_14883270101083114198.jpg"></li>
+                <li><img src="http://img2.news18a.com/site/other/201703/ina_14883270101083114198.jpg"></li>
+               
+            </ul>
+        </div>
+        <{/if}>
+    </div>
+    
+</div>
+<div class="ina_silde">
+    <{include file="../Public/nav.html"}>
+    <div class="ina_list">
+        <{foreach $list2 as $k => $vo}>
+        <dl>
+            <dt><a href="__APP__/Index/show/id/<{$vo.id}>" target="_blank"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$vo.cover2}>" /></a>
+            <{if $vo.isbest}><em><i>精</i></em><{/if}>
+            </dt>
+            <dd>
+                <div class="ina_label">
+                    <{foreach $vo['class_name'] as $vvv}>
+                    <span class="http://img.news18a.com/community/image/fatie.png<{$vvv.class_num}>"><{$vvv.class_name}></span>
+                    <{/foreach}>
+                    <p><i class="ina_icon"></i><{$vo.addtime}></p>
+                </div>
+                <h3><a href="__APP__/Index/show/id/<{$vo.id}>" target="_blank"><{$vo.title}></a></h3>
+                <div class="ina_list_bottom">
+                    <div class="ina_photo">
+                        <a href="__APP__/Ucenter/uspace/uid/<{$vo.uid}>" target="_blank">
+                            <img src="<{$vo.picture_path}>"><{$vo.username}>
+                        </a>
+                    </div>
+                    <p><span><i class="ina_icon ina_read"></i><{$vo.scan}></span><span><i class="ina_icon ina_message"></i><{$vo.pl_num}></span><span><i class="ina_icon ina_roar"></i><{$vo.znum}></span></p>
+                </div>
+            </dd>
+        </dl>
+        <{/foreach}>
+    </div>
+    
+    <div class="ina_page">
+        <{$pageinfo}>
+    </div>
+</div>
+<div class="ina_fixed"><a href="__APP__/Index/add" target="_blank"><img src="http://img.news18a.com/community/image/fatie.png"></a></div>
+<script src="http://img.news18a.com/community/js/public.js"></script>
+<script>
+if($(".ina_focus").length>0){
+    for(var i=0;i<$(".ina_focus").length;i++){
+        $(".ina_focus").eq(i).tab({
+            nr:".ina_focusnr a",
+            daohang:".ina_focus_tab li",
+            prev:".ina_prev",
+            next:".ina_next",
+            display:"left",
+            auto:"true",
+            original:"data-original"
+        });
+    }
+}
+$("img").lazyload({effect:"fadeIn"});
+</script>
+<{include file="../Public/foot.html"}>
+</body>
+</html>

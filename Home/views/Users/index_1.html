@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>兴趣社区-注册</title>
+        <link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/index.css">
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+    </head>
+    <body class="ina_f5f5f5">
+        <{include file="../Public/head.html"}>
+
+        <div class="ina_silde">
+            <div class="ina_login">
+                <div class="ina_login_top">
+                    <p>Hi，我亲爱的朋友。请注册网通社“极趣”社区，与千万用户一起交流、一起分享趣味生活。</p>
+                    <span>Hi my dearest friend, welcome to "Ultimate Delight" community of Internet Info Agency. Log in, and communicate and share the joys with other users.</span>
+                </div>
+                <form>
+                    <ul>
+                        <li><input type="text" id="username" placeholder="手机号/邮箱"></li>
+                        <li><input type="password" id="userpass" placeholder="密码"></li>
+                        <li><a href="javascript:;;" id="cur" class="cur">注册</a><a href="__URL__/login">登录</a></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                //注册
+                $("#cur").click(function () {
+                    var username = $("#username").val();
+                    var userpass = $("#userpass").val();
+                    if (username == '') {
+                        alert('账号不能为空');
+                        return;
+                    }
+                    if (userpass == '') {
+                        alert('密码不能为空');
+                        return;
+                    }
+                    $.post("__APP__/Users/insert", {"username": username, "userpass": userpass}, function (data) {
+                        data = eval("(" + data + ")");
+                        alert(data.info);
+                        //注册成功执行跳转
+                        if (data.status == '0') {
+                            window.location.href = '/index.php/Ucenter/euserinfo';
+
+                        }
+
+                    });
+
+                });
+
+            });
+        </script>
+    </body>
+</html>

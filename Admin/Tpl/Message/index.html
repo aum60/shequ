@@ -1,0 +1,233 @@
+<{include file="Public/pagerForm.html"}>
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+	<input type="hidden" name="numPerPage" value="<{$numPerPage}>" /><!--每页显示多少条-->
+	<div class="searchBar">
+            
+          
+		<table class="searchContent">
+			<tr>
+				<td>
+                    <b>搜索</b> &nbsp; 
+                </td>
+                <td>
+                    昵称：
+                    <input type="text" name="name" size='10' value="<{$smarty.post.name}>" />
+                </td>
+                <td>
+                    标题：
+                    <input type="text" name="title" size='15' value="<{$smarty.post.title}>" />
+                </td>
+                <td>
+                    分类：<{html_options name='pid' options=$myOptions selected=$mySelect}>
+                </td>
+                <td>
+                    状态：
+                    <select name="status" >
+                        <option value="0" <{if $smarty.post.status eq '0'}>selected="selected"<{/if}>>请选择</option>
+                        <option value="1" <{if $smarty.post.status eq '1'}>selected="selected"<{/if}>>已审核</option>
+                        <option value="3" <{if $smarty.post.status eq '3'}>selected="selected"<{/if}>>未审核</option>
+                        <option value="5" <{if $smarty.post.status eq '5'}>selected="selected"<{/if}>>未通过审核</option>
+                        <option value="2" <{if $smarty.post.status eq '2'}>selected="selected"<{/if}>>草稿</option>
+                        <option value="4" <{if $smarty.post.status eq '4'}>selected="selected"<{/if}>>已删除</option>
+                    </select>
+                </td>
+                <td>
+                    <input style='float:left' type="checkbox" name="isbest" value='1' <{if $smarty.post.isbest eq '1'}>checked<{/if}>>
+                    <div style='float:left;margin:4px -13px 0px 5px'>精华帖</div>
+                </td>
+<!--                <td>
+                    <input style='float:left' type="checkbox" name="ishot" value='1' <{if $smarty.post.ishot eq '1'}>checked<{/if}>>
+                    <div style='float:left;margin:4px -10px 0px 5px'>精华推送</div>
+                </td>
+                 <td>
+                    <input style='float:left' type="checkbox" name="isindex" value='1' <{if $smarty.post.isindex eq '1'}>checked<{/if}>>
+                    <div style='float:left;margin:4px -10px 0px 5px'>首页轮播</div>
+                </td>-->
+                <td>
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">搜索</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+            <ul class="toolBar">
+                <!--<li><a class="add" href="__URL__/add" target="dialog" width="1200" height="900" title="发表帖子"><span>添加帖子</span></a></li>-->
+                <!--<li><a class="edit" href="__URL__/edit/id/{item_id}"  width="1200" height="500" target="dialog"><span>修改帖子</span></a></li>-->
+<!--                <li><a class="delete" href="__URL__/delete/id/{item_id}/navTabId/listmessage" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>-->
+                <li class="line">line</li>
+                <li><a class="add" id="all_examine" title="确定要进行批量审核吗?"><span>批量审核</span></a></li>
+                <li><a class="delete" id="re_all_examine" title="确定要进行批量取消审核吗?"><span>批量取消审核</span></a></li>
+                <li class="line">line</li>
+                <li><a class="add" id="all_jinghua" title="确定要进行批量加精华吗?"><span>批量加精华</span></a></li>
+                <li><a class="delete" id="re_all_jinghua" title="确定要进行批量取消精华吗?"><span>批量取消精华</span></a></li>
+                <li class="line">line</li>
+                <li><a class="delete" id="re_all_bohui" title="确定要进行批量驳回吗?"><span>批量驳回</span></a></li>
+                <li class="line">line</li>
+                <li><a class="delete" id="all_delete" title="确定要进行批量删除吗?"><span>批量删除</span></a></li>
+                <li class="line">line</li>
+                <li><a class="edit" href="__APP__/Comm/index/mid/{item_id}" target="navTab" rel="listcomm" title="帖子评论信息"><span>查看帖子评论</span></a></li>
+                <li class="line">line</li>
+                <li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+            </ul>
+	</div>
+    <style type="text/css">
+        .grid .gridTbody td div{ height: 100px;}
+    </style>
+	<table class="table" width="100%" layoutH="112">
+		<thead>
+			<tr>
+                            <th width="10"></th>
+                            <!--<th width="40" orderField="id" <{if $smarty.request._order='id'}>class=<{$smarty.request._sort}><{/if}>>ID</th>-->
+                            
+                            <th width="150">昵称</th>
+                            <th width="150">标题</th>
+                            <th width="150">头图</th>
+                            <th width="150">分类</th>
+                            <th width="150">添加时间</th>
+                            <th width="150">精华帖</th>
+<!--                            <th width="150">精华推送</th>
+                            <th width="150">是否首页轮换</th>-->
+                            <!--<th width="150" orderField="scan" <{if $smarty.request._order=='scan'}>class="<{$smarty.request._sort}>"<{/if}>>浏览次数</th>-->
+                            <th width="150">浏览次数</th>
+                            <th width="150">评论次数</th>
+                            <th width="150">状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			<{foreach $list as $vo}>
+                            <tr target="item_id" rel="<{$vo.id}>">
+                                <td style="heigh：100xp;" width="10"><input type='checkbox' name='select_deom' value="<{$vo.id}>" /></td>
+                                <td><{$vo.name}></td>
+                                <td><a href="__URL__/edit/id/<{$vo.id}>"  width="1200" height="500" target="dialog"><{$vo.title}></a></td>
+                                <td><{if $vo['cover2']}><img height="100" src="<{$vo['cover2_path']}>" /><{else}>无<{/if}></td>
+                                <td><{$vo.pid}></td>
+                                <td><{$vo.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></td>
+                                <td><{if $vo.isbest=='1'}>是<{else}>否<{/if}></td>
+<!--                                <td><{if $vo.ishot=='1'}>是<{else}>否<{/if}></td>
+                                <td><{if $vo.isindex=='1'}>是<{else}>否<{/if}></td>-->
+                                <td><{$vo.scan}></td>
+                                <td><{$vo.plnum}></td>
+                                <td><{if $vo.status=='1'}>已审核<{else if $vo.status=='2'}>草稿<{else if $vo.status=='3'}>未审核<{else if $vo.status=='4'}>已删除<{else if $vo.status==5}>未通过审核<{/if}></td>
+                            </tr>
+			<{/foreach}>
+		</tbody>
+	</table>
+	<div class="panelBar">
+            <div class="pages">
+                <span>显示</span>
+                <select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+                        <option value="10" <{if $numPerPage==10}>selected<{/if}>>10</option>
+                        <option value="15" <{if $numPerPage==15}>selected<{/if}>>15</option>
+                        <option value="20" <{if $numPerPage==20}>selected<{/if}>>20</option>
+                        <option value="25" <{if $numPerPage==25}>selected<{/if}>>25</option>
+                        <option value="30" <{if $numPerPage==30}>selected<{/if}>>30</option>
+                </select>
+                <span>共<{$totalCount}>条</span>
+            </div>
+            <div class="pagination" targetType="navTab" totalCount="<{$totalCount}>" numPerPage="<{$numPerPage}>" pageNumShown="10" currentPage="<{$currentPage}>"></div>
+	</div>
+</div>
+<script>
+$(function(){
+    $("#all_delete").click(function(){
+         var r=confirm("确定执行批量删除？")
+            if (r==true){
+                var str = '';
+                $("input[name='select_deom']:checked").each(function(){
+                    str += $(this).val() + ',';
+                });
+                $.post('__URL__/all_delete',{'str':str},function(data){
+                    if(data==2){
+                        alert('删除成功');
+                        navTabPageBreak();
+                    }
+                });
+            }
+    });
+    //批量审核
+    $("#all_examine").click(function(){
+       var r=confirm("确定执行批量审核？");
+            if (r==true){
+                var str = '';
+                $("input[name='select_deom']:checked").each(function(){
+                    str += $(this).val() + ',';
+                });
+                $.post('__URL__/all_examine',{'str':str},function(data){
+                    if(data==2){
+                        alert('审核成功');
+                        navTabPageBreak();
+                    }
+                });
+            }
+    });
+    //批量取消审核
+    
+    $("#re_all_examine").click(function(){
+       var r=confirm("确定执行批量取消审核？");
+            if (r==true){
+                var str = '';
+                $("input[name='select_deom']:checked").each(function(){
+                    str += $(this).val() + ',';
+                });
+                $.post('__URL__/re_all_examine',{'str':str},function(data){
+                    if(data==2){
+                        alert('取消审核成功');
+                        navTabPageBreak();
+                    }
+                });
+            }
+    });
+    //批量精华
+    $("#all_jinghua").click(function(){
+       var r=confirm("确定执行批量加精华？");
+            if (r==true){
+                var str = '';
+                $("input[name='select_deom']:checked").each(function(){
+                    str += $(this).val() + ',';
+                });
+                $.post('__URL__/all_jinghua',{'str':str},function(data){
+                    if(data==2){
+                        alert('添加精华成功');
+                        navTabPageBreak();
+                    }
+                });
+            }
+    });
+    //批量精华
+    $("#re_all_jinghua").click(function(){
+       var r=confirm("确定执行批量取消精华？");
+            if (r==true){
+                var str = '';
+                $("input[name='select_deom']:checked").each(function(){
+                    str += $(this).val() + ',';
+                });
+                $.post('__URL__/re_all_jinghua',{'str':str},function(data){
+                    if(data==2){
+                        alert('取消精华成功');
+                        navTabPageBreak();
+                    }
+                });
+            }
+    });
+    //批量驳回
+    $("#re_all_bohui").click(function(){
+       var r=confirm("确定执行批量驳回精华？");
+            if (r==true){
+                var str = '';
+                $("input[name='select_deom']:checked").each(function(){
+                    str += $(this).val() + ',';
+                });
+                $.post('__URL__/re_all_bohui',{'str':str},function(data){
+                    if(data==2){
+                        alert('批量驳回成功');
+                        navTabPageBreak();
+                    }
+                });
+            }
+    });
+});
+</script>

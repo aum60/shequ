@@ -1,0 +1,84 @@
+<div class="<{if $ACTION_NAME == 'uspace'}>ina_author_bg<{else}>ina_center_bg<{/if}>">
+    <div class="ina_silde">
+        <div class="ina_author_top">
+            <dl>
+                <dt>
+                    <{if $ACTION_NAME == 'uspace'}><a href="javascript:;;"><{else}><a href="__APP__/Ucenter/euserinfo"><{/if}><img src="<{$user.picture_path}>"></a><!--<img src="http://img.news18a.com/community/image/man.png">--><i></i>
+                    <a href="__APP__/Ucenter/uspace/uid/<{$user.id}>"><span class="ina_first">发帖数<br><b><{$count_mess}></b></span></a>
+                    <span>关注<br><b><{$count_f}></b></span>
+                    <span>粉丝<br><b><{$count_s}></b></span>
+                </dt>
+                <dd>
+                    <div class="ina_author_name">
+                        <h3><{$user.username}></h3>
+                        <p>
+                            <span>
+                                <{if $user.sex eq '1'}>
+                                <span><i class="ina_icon ina_man"></i>男</span>
+                                <{else}>
+                                <span><i class="ina_icon ina_women"></i>女</span>
+                                <{/if}>
+                            </span>
+                            <{if $user.city}>
+                            <span><i class="ina_icon ina_addr"></i>来自<{$user.province}><{$user.city}></span>
+                            <{/if}>
+
+                            <{if $user.constellation}>
+                            <span><i class="ina_icon <{if $user.constellation eq '处女座'}>
+                    ina_chunv
+                    <{else if $user.constellation eq '水瓶座'}>
+                    ina_shuiping
+                    <{else if $user.constellation eq '天秤座'}>
+                    ina_tiancheng
+                    <{else if $user.constellation eq '射手座'}>
+                    ina_sheshou
+                    <{else if $user.constellation eq '双子座'}>
+                    ina_shuangzi
+                    <{else if $user.constellation eq '金牛座'}>
+                    ina_jinniu
+                    <{else if $user.constellation eq '巨蟹座'}>
+                    ina_juxie
+                    <{else if $user.constellation eq '天蝎座'}>
+                    ina_tianxie
+                    <{else if $user.constellation eq '狮子座'}>
+                    ina_shizi
+                    <{else if $user.constellation eq '白羊座'}>
+                    ina_baiyang
+                    <{else if $user.constellation eq '摩羯座'}>
+                    ina_mojie
+                    <{else if $user.constellation eq '双鱼座'}>
+                    ina_shuangyu
+                    <{/if}>"></i><{$user.constellation}></span>
+                            <{/if}>
+
+                        </p>
+                    </div>
+                    <div class="ina_label">
+                        <{if $user.interest}>
+                        <{foreach $user.interest as $v}>
+                        <span class="ina_cur"><{$v.name}></span>
+                        <{/foreach}>
+                        <{else}>
+                        <span class="ina_cur">兴趣</span>
+                        <{/if}>
+
+                    </div>
+                    <div class="ina_author_jj"><span>个人简介：</span><{$user.introduce}></div>
+                    <div class="ina_gzzt">
+                        <{if $editor}>
+                        <a href="__APP__/Ucenter/euserinfo" class="ina_edit"><i class="ina_icon"></i></a>
+                        <{else}>
+                            <{if $list.follow=='1'}>
+                            <a href="javascript:;;" class="quxiao ina_yiguanzhu" uid="<{$user.id}>"><i class="ina_icon"></i><b>已关注</b><em>取&nbsp;&nbsp;消</em></a>
+                            <{else if $list.follow=='2'}>
+                            <a href="javascript:;;" class="quxiao ina_huguanzhu" uid="<{$user.id}>"><i class="ina_icon"></i><b>互关注</b><em>取消</em></a>
+                            <{else}>
+                            <a href="javascript:;;" class="tianjiagz ina_jia" uid="<{$user.id}>"><i class="ina_icon"></i>加关注</a>
+                            <{/if}>
+                        <{/if}>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

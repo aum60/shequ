@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>极趣-热门排行</title>
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/index.css">
+</head>
+<body class="ina_f5f5f5">
+<{include file="../Public/head.html"}>
+
+<div class="ina_silde">
+    <div class="ina_hotbt">
+        <ul>
+            <li <{if $time==''}>class="ina_cur"<{/if}>><a href="__APP__/Index/hot"><i class="ina_icon"></i>7日-帖子排行</a></li>
+            <li <{if $time=='month'}>class="ina_cur"<{/if}>><a href="__APP__/Index/hot/time/month"><i class="ina_icon"></i>一个月-帖子排行</a></li>
+            <li <{if $time=='all'}>class="ina_cur"<{/if}>><a href="__APP__/Index/hot/time/all"><i class="ina_icon"></i>历史以来排行</a></li>
+        </ul>
+    </div>
+    <div class="ina_hotnr">
+        <dl>
+            <dt>热门帖子排行榜</dt>
+            <dd>
+                <ul>
+                    <{foreach $list as $k => $v}>
+                    <{if $k <= 2}>
+                    <li>
+                        <div class="ina_hot_left"><i class="ina_icon ina_<{if $k == 0}>one<{else if $k == 1}>two<{else if $k == 2}>three<{/if}>"><{$k+1}></i></div>
+                        <div class="ina_hot_right">
+                            <a href="__APP__/Index/show/id/<{$v.id}>" target="_blank"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$v.cover2}>" />
+                            <h3><{$v.title}></h3>
+                            <p>
+                                <span class="ina_name"><img src="<{$v.picture_path}>"><{$v.username}></span>
+                                <span class="ina_looked"><i class="ina_icon"></i><{$v.scan}></span>
+                            </p>
+                            </a>
+                        </div>
+                    </li>
+                    <{else}>
+                    <li>
+                        <div class="ina_hot_left"><i class="ina_icon"><{$k+1}></i></div>
+                        <div class="ina_hot_right">
+                           <a href="__APP__/Index/show/id/<{$v.id}>" target="_blank"> <h3><{$v.title}></h3>
+                            <span class="ina_looked"><i class="ina_icon"></i><{$v.scan}></span></a>
+                        </div>
+                    </li>
+                    <{/if}>
+                    <{/foreach}>
+                </ul>
+            </dd>
+        </dl>
+        <dl>
+            <dt>热门评论排行榜</dt>
+            <dd>
+                <ul>
+                    <{foreach $common as $k => $v}>
+                    <{if $k <= 2}>
+                    <li>
+                        <div class="ina_hot_left"><i class="ina_icon ina_<{if $k == 0}>one<{else if $k == 1}>two<{else if $k == 2}>three<{/if}>"><{$k+1}></i></div>
+                        <div class="ina_hot_right">
+                            <a href="__APP__/Index/show/id/<{$v.id}>" target="_blank"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$v.cover2}>">
+                            <h3><{$v.title}></h3>
+                            <p>
+                                <span class="ina_name"><img src="<{$v.picture_path}>"><{$v.username}></span>
+                                <span class="ina_pinglun"><i class="ina_icon"></i><{$v.pl_num}></span>
+                            </p>
+                            </a>
+                        </div>
+                    </li>
+                     <{else}>
+                    <li>
+                        <div class="ina_hot_left"><i class="ina_icon"><{$k+1}></i></div>
+                        <div class="ina_hot_right">
+                            <a href="__APP__/Index/show/id/<{$v.id}>" target="_blank"><h3><{$v.title}></h3>
+                            <span class="ina_pinglun"><i class="ina_icon"></i><{$v.pl_num}></span></a>
+                        </div>
+                    </li>
+                    <{/if}>
+                    <{/foreach}>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="ina_fixed"><a href="__APP__/Index/add" target="_blank"><img src="http://img.news18a.com/community/image/fatie.png"></a></div>
+<script src="http://img.news18a.com/community/js/public.js"></script>
+<script>
+    $("img").lazyload({effect:"fadeIn"});
+
+
+</script>
+<{include file="../Public/foot.html"}>
+</body>
+</html>

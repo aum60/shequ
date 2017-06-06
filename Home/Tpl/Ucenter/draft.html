@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>我的草稿-极趣</title>
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/170515/index.css">
+</head>
+<body class="ina_f0f0f0">
+<{include file="../Public/head.html"}>
+<{include file="../Public/user_head.html"}>
+<div class="ina_silde">
+    <div class="ina_author">
+        <{include file="../Public/user_nav.html"}>
+        <{if $list2}>
+        <div class="ina_list_search">
+            <{foreach $list2 as $v}>
+            <dl>
+                <dt>
+                    <a href="__APP__/Index/edit/id/<{$v.id}>" target="_blank"><{if $v.cover2_path}><img src="<{$v.cover2}>"><{else}><img src="http://img.news18a.com/community/image/lazyload_324.jpg"><{/if}></a>
+                    <span class="ina_delete" style="display: none;" data="<{$v['id']}>">&times;</span>
+                </dt>
+                <dd>
+                    <h3><a href="__APP__/Index/edit/id/<{$v.id}>" target="_blank"><{$v.title}></a></h3>
+                    <div class="ina_label">
+                        <span class="ina_caogao"><{$v.status}></span>
+                        <p><i class="ina_icon"></i><{$v.addtime}></p>
+                    </div>
+                </dd>
+            </dl>
+            <{/foreach}>
+        </div>
+        <{if $count_page}>
+        <div class="ina_more_btn">
+            <a href="#">查看更多兴趣<i class="ina_icon"></i></a>
+        </div>
+        <{/if}>
+        <{else}>
+        <div class="ina_boxno">
+            <img src="http://img.news18a.com/community/image/tiezi.jpg">
+            <span>DA爷今天心情不错，<a href="__APP__/Index/add">发个帖子</a>去O(∩_∩)</span>
+        </div>
+        <{/if}>
+    </div>
+</div>
+<div class="ina_fixed"><a href="__APP__/Index/add" target="_blank"><img src="http://img.news18a.com/community/image/fatie.png"></a></div>
+<div class="ina_fh"><img src="http://img.news18a.com/community/image/170515/fh.png"></div>
+<script>
+    $(".ina_list_search dl dt").live("mouseover",function(){
+        $(this).find("span").show();
+    })
+    $(".ina_list_search dl dt").live("mouseout",function(){
+        $(this).find("span").hide();
+    })
+    $(".ina_list_search dl dt span").live("click",function(){
+        var _this = $(this);
+        ina_tksure("提示信息","确定要删除该草稿吗？",function(_this){
+            var id = _this.attr('data');
+            $.post("/index.php/Index/del_mess",{"id":id},function(res){
+                if(res==1){
+                    _this.parents("dl").remove();
+                    $(".ina_zhezhao").css("display","none");
+                    $(".ina_tksure").css("display","none");
+                    window.location.reload();
+                }
+            });
+        },_this);
+    });
+
+    function ina_tk(str,btn,href){
+        var height=$(window).height();
+        if(href==undefined||href==null){href="javascript:;"}
+        var html="<div class='ina_tkbg' style='height:"+height+"px'></div><div class='ina_tk'><a href='javascript:;' class='ina_close'>&times;</a><p>"+str+"</p><div class='ina_tkbtn'><i></i><a href='"+href+"'>"+btn+"</a></div></div>";
+        $("body").append(html)
+        $(".ina_tkbg,.ina_close,.ina_tk .ina_tkbtn a").live("click",function(){
+            $(".ina_tk,.ina_tkbg").remove();
+        })
+    }
+</script>
+<{include file="../Public/foot.html"}>
+</body>
+</html>

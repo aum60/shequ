@@ -1,0 +1,17 @@
+<dl>
+    <dt>
+        <a href="__APP__/Index/show/id/<{$v.id}>" target="_blank"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$v.cover2}>" />
+            <div class="ina_list_bottom">
+                <p><span><i class="ina_icon ina_read"></i><{$v.scan}></span><span><i class="ina_icon ina_message"></i><{$v.pl_num}></span></p>
+            </div>
+        </a>
+        <{if $v.isbest}><em></em><{/if}>
+    </dt>
+    <dd>
+        <h3><a href="#"><{$v.title}></a></h3>
+        <div class="ina_label">
+            <span class="ina_label<{$v.pid_class}>"><{$v.pid_name}></span>
+            <p><i class="ina_icon"></i><{$v.addtime}></p>
+        </div>
+    </dd>
+</dl>

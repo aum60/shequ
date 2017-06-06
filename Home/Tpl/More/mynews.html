@@ -1,0 +1,15 @@
+<dl <{if $v.status eq 1}>class="ina_cur"<{/if}> datas="<{$v.id}>">
+<dt><{if $v.message_type eq '文章消息'}>
+    <img src="<{$v.photo}>">
+    <{else if $v.message_type eq '互动消息'}>
+    <img src="<{$v.photo}>">
+    <{else}>
+    <img src="http://img.news18a.com/community/image/170515/logo_50.png">
+    <{/if}>
+</dt>
+<dd>
+    <h3><{$v.message_type}></h3>
+    <span><{$v.create_time}></span>
+    <a href="javascript:;;" id="delete_notic" idv="<{$v.id}>" class="ina_delete">&times;</a>
+    <p><{$v.message}> <{if $v.message_type neq '互动消息'}><{if $v.systemid == 0}><a href="__APP__/Index/show/id/<{$v.message_id}>/see/1">查看文章</a><{/if}><{/if}></p></dd>
+</dl>
