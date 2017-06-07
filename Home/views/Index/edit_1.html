@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>发帖</title>
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/index.css">
+</head>
+<body class="ina_f5f5f5">
+<{include file="../Public/head.html"}>
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/uploadify.css">
+<script type="text/javascript" src="__PUBLIC__/js/jquery.uploadify.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/css/jquery.Jcrop.css" type="text/css" />
+<script src="__PUBLIC__/js/jquery.Jcrop.js"></script>
+<script type="text/javascript" src="__PUBLIC__/xheditor/xheditor-1.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/xheditor/xheditor_lang/zh-cn.js"></script>
+<div class="ina_silde">
+    <div class="ina_post">
+        <div class="ina_post_bt"><h3>发表文章</h3></div>
+        <div class="ina_postnr">
+            <ul>
+                <li>
+                    <label>个性标题<b>*</b></label>
+                    <input type="text" value="<{$list.title}>" placeholder="在这里输入文章标题(⊙o⊙)…" id="ina_gxbt">
+                    <p>还可以输入<b>12</b>个字符</p>
+                </li>
+                <li>
+                    <label>选择栏目<b>*</b></label>
+                    <div class="ina_change">
+                        <{foreach $cat as $k => $v}>
+                        <a href="javascript:;" data="<{$v.id}>" <{if $v.id==$list.pid}>class="ina_cur"<{/if}>><{$v.name}></a>
+                        <{/foreach}>
+                    </div>
+                </li>
+                <li>
+                    <label>精彩头图<b>*</b></label>
+                    <div class="ina_file" id="pic_show_1">
+                        <{if $list.cover}>
+                        <img src="<{$list.cover_path}>" />
+                        
+                        <{else}>
+                        <p><i class="ina_icon"></i></p>
+                        <p><span>上传图片</span></p>
+                        <p>头图上传限宽1000PX,高500PX，<br>文件大小300K以下。</p>
+                        <{/if}>
+                        <input id="file_upload" type="file">
+                    </div>
+                    <label class="ina_file_right" >上传封面<b>*</b></label>
+                    <div class="ina_file ina_file_270" id="pic_show_2">
+                        <{if $list.cover2}>
+                        <img src="<{$list.cover2_path}>" />
+                        
+                        <{else}>
+                        <p><i class="ina_icon"></i></p>
+                        <p><span>上传图片</span></p>
+                        <p>头图上传限宽1000PX,高500PX，<br>文件大小300K以下。</p>
+                        <{/if}>
+                        <input id="file_upload_1" type="file">
+                    </div>
+                </li>
+                <li id="cut_pic">
+                    <img id="cropbox" src="" /><br>
+                    <input type="button" id="cut_pic_button" value="剪裁" />
+                    <input type="hidden" id="x" name="x" /> 
+                    <input type="hidden" id="y" name="y" /> 
+                    <input type="hidden" id="w" name="w" /> 
+                    <input type="hidden" id="h" name="h" />
+                    <input type="hidden" id="showpicval" value="<{$list.cover}>" />
+                    
+                </li>
+                 <li id="cut_pic_1">
+                    <img id="cropbox_1" src="" /><br>
+                    <input type="button" id="cut_pic_button_1" value="剪裁" />
+                    <input type="hidden" id="x_1" name="x" /> 
+                    <input type="hidden" id="y_1" name="y" /> 
+                    <input type="hidden" id="w_1" name="w" /> 
+                    <input type="hidden" id="h_1" name="h" />
+                    <input type="hidden" id="showpicval_1" value="<{$list.cover2}>" />
+                    
+                </li>
+                <li>
+                    <label>发布正文<b>*</b></label>
+                    <textarea id="c_content" cols="118" rows="40" class="xheditor-simple {upImgUrl:'__URL__/doupload',upImgExt:'jpg,jpeg,gif,png',html5Upload:false}" name="content" ><{$list.content}></textarea>
+                </li>
+                <li>
+                    <label>&nbsp;</label>
+                    <div class="ina_btn"><a href="javascript:;;" id="ina_save" data="1" class="ina_save"><i class="ina_icon"></i>保存</a><a href="javascript:;;" id="ina_fabu" data="1" class="ina_fabu"><i class="ina_icon"></i>发布</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="ina_password_tk">
+    <div class="ina_password_bt"><h3 class="ts_title" data=""></h3><a href="javascript:;" class="ina_icon"></a></div>
+    <div class="ina_passwordnr">
+        <p><i class="ina_icon"></i></p>
+        <p class="ts_content"></p>
+    </div>
+</div>
+<div class="ina_zhezhao"></div>
+<style type="text/css">
+    .button_style{ background: none; border:0;}
+    .button_style:hover{ background: none;}
+    .uploadify-button:hover{ background: none;}
+    .uploadify object{ left: 0; top: 0;}
+    #cut_pic{display: none; height: auto;}
+    #cut_pic_1{display: none; height: auto;}
+    #cut_pic input{ width: 100px;border: 1px solid #ccc; color: #292929; width: 100px; cursor: pointer}
+    #cut_pic_1 input{ width: 100px; border: 1px solid #ccc; color: #292929; width: 100px; cursor: pointer}
+</style>
+<script>
+/*提示框*/
+$(".ina_sure").click(function(){
+    $(".ina_forgetpassword").find("ul li span").hide();
+    var password1=$("#ina_password1").val(),password2=$("#ina_password2").val();
+    if(password1!=password2){
+        $(".ina_forgetpassword").find("ul li span").show();
+        return false;
+    }
+    else{
+        $(".ina_zhezhao,.ina_password_tk").show();
+    }
+})
+$(".ina_zhezhao,.ina_password_tk .ina_password_bt a").click(function(){
+    $(".ina_zhezhao,.ina_password_tk").hide();
+    if($('.ts_title').attr('data')=='1'){
+         window.location.href='__APP__/Ucenter/mymess'; 
+    }else{
+        window.location.href='__APP__/Ucenter'; 
+    }
+    
+});
+/*提示框end*/
+if($(".ina_post .ina_postnr ul li .ina_change a").length>0){
+    $(".ina_post .ina_postnr ul li .ina_change a").click(function(){
+        $(this).addClass('ina_cur').siblings().removeClass('ina_cur');
+    })
+}
+var element = document.getElementById("ina_gxbt");
+if("\v"=="v") {
+     if(/msie/i.test(navigator.userAgent)){element.onpropertychange = myfun;}
+}else{
+     element.addEventListener("input",myfun,false);
+}
+function myfun(){
+    var val=element.value;
+    if(val.length>12){
+        $("#ina_gxbt").val(val.substr(0,12));
+        return false;
+    }
+    else{
+        $("#ina_gxbt").parents("li").find("p b").html(12-val.length);
+    }
+}
+$(function(){
+    $('#file_upload').uploadify({
+        'formData': {
+            'timestamp': '<{$time}>',
+            'token': '<{$token}>',
+            'sessionid': '<{$session_id}>',
+            'sizeproportion':1
+        },
+        'swf': '__PUBLIC__/js/uploadify.swf',
+        'auto': true, //是否自动上传  
+        'uploader': '__URL__/add_uploadpic/',
+        'fileTypeExts': '*.jpg;*.gif;*.jpeg;*.png',
+        'buttonText': '',
+        'removeTimeout': 0,
+        'height'        : 180,
+        'width'        : 360,
+        'buttonClass': "button_style",
+        'onInit': function () {                        
+           $("#file_upload-queue").hide();
+        },
+        'onUploadSuccess': function (file, data, respone) {
+            $("#cropbox").attr('src','<{$ftp_img_path}>' + data);
+            $("#showpicval").val(data);
+            $("#cut_pic").slideDown(500);
+            //调用裁剪插件
+                $('#cropbox').Jcrop({
+                    aspectRatio: 2 / 1,
+                    onSelect: updateCoords,
+                    minSize:[1000,500],
+                    setSelect:[0,50,1000,500],
+                    onRelease:function(){
+                        return;
+                    }
+                });
+        }
+    });
+    $('#file_upload_1').uploadify({
+        'formData': {
+            'timestamp': '<{$time}>',
+            'token': '<{$token}>',
+            'sessionid': '<{$session_id}>',
+            'sizeproportion':2
+        },
+        'swf': '__PUBLIC__/js/uploadify.swf',
+        'auto': true, //是否自动上传  
+        'uploader': '__URL__/add_uploadpic/',
+        'fileTypeExts': '*.jpg;*.gif;*.jpeg;*.png',
+        'buttonText': '',
+        'removeTimeout': 0,
+        'height'        : 180,
+        'width'        : 270,
+        'buttonClass': "button_style",
+        'onInit': function () {      
+           $("#file_upload-queue").hide();
+        },
+        'onUploadSuccess': function (file, data, respone) {
+            $("#cropbox_1").attr('src','<{$ftp_img_path}>' + data);
+            $("#showpicval_1").val(data);
+            $("#cut_pic_1").slideDown(500);
+            //调用裁剪插件
+                $('#cropbox_1').Jcrop({
+                    aspectRatio: 3 / 2,
+                    onSelect: updateCoords_1,
+                    minSize:[270,180],
+                    setSelect:[0,0,270,180],
+                    onRelease:function(){
+                        return;
+                    }
+                });
+        }
+    });
+    //剪裁
+   
+    $("#cut_pic_button").click(function(){
+        if (parseInt($('#w').val())){
+            var pn =  $('#showpicval').val();
+            var x = $('#x').val();
+            var y = $('#y').val();
+            var w = $('#w').val();
+            var h = $('#h').val();
+            $.post("__APP__/Index/cut_pic_size",{'pn':pn,'x':x,'y':y,'w':w,'h':h},function(res){
+                $("#cut_pic").slideUp(500);
+                $("#pic_show_1").html("<img src='<{$ftp_img_path}>" + res + "' width='360' height='180'>")
+                $('#showpicval').val(res);
+            });
+        }else{
+            alert('请选择一个裁剪区域');
+        } 
+        
+    });
+    $("#cut_pic_button_1").click(function(){
+        if (parseInt($('#w_1').val())){
+            var pn =  $('#showpicval_1').val();
+            var x = $('#x_1').val();
+            var y = $('#y_1').val();
+            var w = $('#w_1').val();
+            var h = $('#h_1').val();
+            $.post("__APP__/Index/cut_pic_size",{'pn':pn,'x':x,'y':y,'w':w,'h':h},function(res){
+                $("#cut_pic_1").slideUp(500);
+                $("#pic_show_2").html("<img src='<{$ftp_img_path}>" + res + "' width='270' height='180'>")
+                $('#showpicval_1').val(res);
+            });
+        }else{
+            alert('请选择一个裁剪区域');
+        } 
+        
+    });
+    function updateCoords(c){
+        $('#x').val(c.x);
+        $('#y').val(c.y);
+        $('#w').val(c.w);
+        $('#h').val(c.h);
+    }
+    function updateCoords_1(c){
+        $('#x_1').val(c.x);
+        $('#y_1').val(c.y);
+        $('#w_1').val(c.w);
+        $('#h_1').val(c.h);
+    }
+    //发帖
+    $("#ina_fabu").click(function(){
+       
+        var ina_gxbt = $("#ina_gxbt").val();
+        var column = $(".ina_change a.ina_cur").attr("data");
+        var showpicval  = $("#showpicval").val();
+        var showpicval_1 = $("#showpicval_1").val();
+        var c_content = $("#c_content").val();
+        if(ina_gxbt==''){
+            alert('请填写标题');
+            return;
+        }
+        if(column==''){
+            alert('请选择栏目');
+            return;
+        }
+        if(showpicval==''){
+            alert('请上传精彩头图');
+            return;
+        }
+        if(showpicval_1==''){
+            alert('请上传上传封面');
+            return;
+        }
+        if(c_content==''){
+            alert('请输入帖子内容');
+            return;
+        }
+        var fabu_data = $(this).attr('data');
+        $(this).attr('data','2').html('<i class="ina_icon"></i>发布中');
+        send_this = $(this);
+        if(fabu_data==1){
+            $.post("__APP__/Index/add_posts",{'id':<{$list.id}>,'ina_gxbt':ina_gxbt,'column':column,'showpicval':showpicval,'showpicval_1':showpicval_1,'c_content':c_content,'types':2},function(res){
+                if(res==1){
+                    $('.ts_title').attr('data','1').text('发帖成功');
+                    $('.ts_content').html("<b>恭喜您！</b>发帖成功(⊙o⊙)…");
+                    $(".ina_password_tk").css('display','block');
+                    $(".ina_zhezhao").css('display','block');
+                }
+                if(res==2){
+                    
+                    alert('帖子信息不完整');
+                    send_this.attr('data','1').html('<i class="ina_icon"></i>发布');
+
+                }
+                if(res==3){
+                    
+                    alert('失败请重试');
+                    send_this.attr('data','1').html('<i class="ina_icon"></i>发布');
+                }
+
+            });
+        }
+    });
+    //保存至草稿箱
+    $("#ina_save").click(function(){
+        var ina_gxbt = $("#ina_gxbt").val();
+        var column = $(".ina_change a.ina_cur").attr("data");
+        var showpicval  = $("#showpicval").val();
+        var showpicval_1 = $("#showpicval_1").val();
+        var c_content = $("#c_content").val();
+        if(ina_gxbt==''){
+            alert('请填写标题');
+            return;
+        }
+        var save_data = $(this).attr('data');
+        $(this).attr('data','2').html('<i class="ina_icon"></i>保存中');
+        save_this = $(this);
+        if(save_data==1){  
+            $.post("__APP__/Index/add_posts",{'id':<{$list.id}>,'ina_gxbt':ina_gxbt,'column':column,'showpicval':showpicval,'showpicval_1':showpicval_1,'c_content':c_content,'types':1},function(res){
+                if(res==1){
+                    $('.ts_title').attr('data','2').text('草稿保存成功');
+                    $('.ts_content').html("<b>恭喜您！</b>草稿保存成功(⊙o⊙)…");
+                    $(".ina_password_tk").css('display','block');
+                    $(".ina_zhezhao").css('display','block');
+                }else{
+                    save_this.attr('data','1').html('<i class="ina_icon"></i>保存');
+                }
+
+            });
+        }
+    });
+});
+
+</script>
+</body>
+</html>

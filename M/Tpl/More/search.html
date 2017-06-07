@@ -1,0 +1,13 @@
+<dl>
+    <a href="__APP__/Index/show/id/<{$vo.id}>">
+        <dt>
+            <img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$vo.cover2}>">
+        <p class="ina_author_date"><{$vo.username}><span><{$vo.addtime}></span></p>
+        <{if $vo.isbest==1}><em><i>精</i></em><{/if}>
+        </dt>
+        <dd class="ina_m12">
+            <h3><{$vo.title}></h3>
+            <div class="ina_js"><{$vo.description}></div>
+        </dd>
+    </a>
+</dl>

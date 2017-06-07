@@ -1,0 +1,147 @@
+
+<div class="pageContent">
+        
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/uploadify.css">
+        <script type="text/javascript" src="__PUBLIC__/js/jquery.uploadify.js"></script>
+        <script src="__PUBLIC__/js/jquery.Jcrop.js"></script>
+        <link rel="stylesheet" href="__PUBLIC__/css/jquery.Jcrop.css" type="text/css" />
+	<form method="post" action="__URL__/data_edit/navTabId/listmessage/callbackType/closeCurrent"  class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+            <style type='text/css'>
+            .uploadify-button-text{ display: block; line-height: 30px;}
+            #add_table{ width: 100%;}
+            #add_table tr td{ padding: 5px;}
+            </style>
+            <div class="pageFormContent" layouth="60">
+                <table id="add_table"> 
+                <tr><td>标题</td></tr>
+                 <tr>
+                    <td>
+                        <input type="text" class="required" value="<{$vo.title}>"  name="title" style="width:300px;" />
+                    </td>
+                </tr> 
+                <tr><td>轮播图</td></tr>
+                 <tr>
+                    <td>
+                        <div id="showpic"><img src="<{$vo.picture_path}>" /></div>
+                      </td>
+                </tr>
+                <tr id="display_tr" style="display:none;">
+                    <td>
+                    <div id="cut_pic">
+                        <img id="cropbox" src="" />
+                    </div>
+                    <a href="javascript:;;" id="clear_cut_pic_button" style=" border:1px solid #999; color: #999;border-radius: 12px;line-height: 30px; margin-top:10px; float:left;padding:5px 10px;">取消</a>
+                    &nbsp; &nbsp;
+                    <a href="javascript:;;" id="cut_pic_button" style="background: #ff5a60 repeat scroll 0 0;border-radius: 12px;color: #fff;line-height: 30px; margin:10px; float:left;padding:5px 10px;">剪裁</a>
+                    <input type="hidden" id="x" name="x" /> 
+                    <input type="hidden" id="y" name="y" /> 
+                    <input type="hidden" id="w" name="w" /> 
+                    <input type="hidden" id="h" name="h" />
+                    <input type="hidden" name="showpicval" value="<{$vo.picture}>" id="showpicval" />
+                    </td>
+                    </tr>
+                    
+                <tr><td><input type="file" id="file_upload" name="enclosure_2" size='50' value='' /></td></tr>
+              
+               
+               
+                <tr><td>文章链接：</td></tr>
+                <tr><td><input type="text" class="required" value="<{$vo.message_link}>"  name="message_link" style="width:600px;" />
+                    <input type="hidden" class="required" value="<{$vo.id}>"  name="id" />
+                    </td></tr>
+                <tr><td>状态：</td></tr>
+                <tr><td><input type="radio" name="status" value="2" <{if $vo.status==2}>checked="checked"<{/if}> />显示&nbsp;&nbsp;<input type="radio" name="status" value="1" <{if $vo.status==1}>checked="checked"<{/if}> />隐藏</td></tr>
+                    </table>
+             </div>
+
+            <input type="hidden" name="id" value="<{$vo.id}>" />
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">修改</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+    $(function () {
+       
+        $('#file_upload').uploadify({
+        'formData': {
+            'timestamp': '<{$time}>',
+            'token': '<{$token}>',
+            'sessionid': '<{$session_id}>',
+            'sizeproportion':1
+        },
+        'swf': '__PUBLIC__/js/uploadify.swf',
+        'auto': true, //是否自动上传  
+        'uploader': '__URL__/add_uploadpic/',
+        'fileTypeExts': '*.jpg;*.gif;*.jpeg;*.png',
+        'buttonText': '上传图片',
+        'removeTimeout': 0,
+        'buttonClass': "button_style",
+        'onUploadStart':function(){
+           $("#display_tr").slideDown(500);
+           $("#cut_pic").html("<img id='cropbox' src='http://img.news18a.com/community/image/lazyload_1000.jpg' />");
+        },
+        'onInit': function () {    
+           $("#file_upload-queue").hide();
+        },
+        'onUploadSuccess': function (file, data, respone) {
+            if(data == 120){alert('图片尺寸不能小于750*500')}
+            $("#cut_pic").empty();
+            $("#cut_pic").html("<img id='cropbox' src='<{$ftp_img_path}>" + data + "' />");
+            $("#showpicval").val(data);
+            //调用裁剪插件
+                $('#cropbox').Jcrop({
+                    aspectRatio: 3 / 2,
+                    onSelect: updateCoords,
+                    minSize:[750,500],
+                    setSelect:[0,0,750,500],
+                    onRelease:function(){
+                        return;
+                    }
+                });
+        },
+
+        'onError' : function (event, ID, fileObj, errorObj) {
+
+            alert(errorObj.type + ', Error: ' + errorObj.info);
+        }
+
+        });
+        //剪裁
+    $("#cut_pic_button").click(function(){
+        if (parseInt($('#w').val())){
+            var pn =  $('#showpicval').val();
+            var x = $('#x').val();
+            var y = $('#y').val();
+            var w = $('#w').val();
+            var h = $('#h').val();
+            $.post("__URL__/cut_pic_size",{'pn':pn,'x':x,'y':y,'w':w,'h':h},function(res){
+                $("#display_tr").slideUp(500);
+                $("#showpic").html("<img src='<{$ftp_img_path}>" + res + "' width='360' height='180'>")
+                $('#showpicval').val(res);
+            });
+        }else{
+            alert('请选择一个裁剪区域');
+        } 
+        
+    });
+    });
+    function updateCoords(c){
+        $('#x').val(c.x);
+        $('#y').val(c.y);
+        $('#w').val(c.w);
+        $('#h').val(c.h);
+    }
+
+
+//    function checkCoords(){
+//        if (parseInt($('#w').val()))
+//            return true;
+//        alert('Please select a crop region then press submit.');
+//        return false;
+//    }
+
+</script>

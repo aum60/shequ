@@ -1,0 +1,46 @@
+<!--<script type="text/javascript" src="__PUBLIC__/js/jquery.lazyload.min.js"></script>-->
+<div class="ina_footer">
+    <p>
+        <a href="http://play.news18a.com"><i class="ina_icon ina_pc"></i>访问电脑端</a>
+        <a href="http://www.news18a.com/app/download.php"><i class="ina_icon ina_app"></i>下载客户端</a>
+    </p>
+    <p>Copyright © 2003-2017聚众网通(北京)科技有限公司版权所有</p>
+</div>
+<script>
+    $.fn.extend({
+        lazyload:function(opt,callback){
+            if(!opt){};
+            _this=this,effect=opt.effect||"show";
+            function size(){
+                var _top=$(window).scrollTop();
+                _this.each(function(){
+                    var height=$(this).height(),img_top=$(this).offset().top;
+                    if(_top>=img_top-$(window).height()&&_top<=img_top+height){
+                        if($(this).attr("data-original")!=null&&$(this).attr("data-original")!=undefined){
+                            if($(this).is(":visible")){
+                                $(this).attr("src",$(this).attr("data-original"));
+                                $(this).removeAttr('data-original');
+                                $(this).effect;
+                            }
+                        }
+                    }
+                })
+            }
+            size();
+            $(window).resize(function(){
+                size();
+            })
+            $(window).scroll(function(){
+                size();
+            })
+        }
+    })
+
+    $(function(){
+        lazy();
+    })
+
+    function lazy(){
+        $("img").lazyload({effect:"fadeIn"});
+    }
+</script>

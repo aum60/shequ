@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>设置</title>
+
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+            <script type="text/javascript" src="__PUBLIC__/jquery/jquery-1.4.4.min.js"></script>
+            <script type="text/javascript" src="__PUBLIC__/xheditor/xheditor-1.2.1.min.js"></script>
+            <script type="text/javascript" src="__PUBLIC__/xheditor/xheditor_lang/zh-cn.js"></script>
+            <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+            <style type="text/css">
+                *{ margin: 0; padding: 0; font-size: 14px; text-decoration: none; color: #292929;}
+                #head{ width: 1100px; height: 100px; margin: 0 auto; position: relative; border: 1px solid #000;}
+                table{ border-collapse: collapse; border-color: #CCC;}
+                td{ padding: 5px; border-color: #CCC;}
+                ul,ul li{ list-style: none;}
+                .clear{ clear: both;}
+                #main{ width: 1100px; margin: 10px auto 0; border: 1px solid #000;}
+                #nav ul li{ border:1px solid #CCC;display: inline; float: left; width: 100px; margin: 10px 4px 0; text-align: center; height: 30px; line-height: 30px;}
+                .data ul li{  float: left; display: inline; width: 260px; overflow: hidden; margin: 10px 0 0 10px;}
+                .data ul li img{ float: left; width:260px; height: 150px;}
+                .data ul li a{ display: inline-block;  width: 260px;}
+                #login_show{ width: 500px; border: 1px solid #000; position: absolute; left: 0; top: 100px; z-index: 999999; background: #FFF; display: none;}
+                #login_show table{ margin: 0 auto; width: 100%; text-align: left;}
+                #password2_tr{ display: none;}
+                #banner{ height: 200px; border: 1px solid #000; margin: 10px auto; width: 1100px;}
+                #footer{ width: 1100px; margin: 10px auto 0; border: 1px solid #000; height: 50px; line-height: 50px; text-align: center;}
+            </style>
+    </head>
+
+    <body>
+        <{include file="../Public/head.html"}>
+        <!--end head-->
+
+        <!--main-->
+        <div id="main">
+
+            <div class="data" style='padding:10px;'>
+                <form id="profile-form" name="myform" class="mt30 form-horizontal" autocomplete="off" action="__APP__/Users/updateset" onsubmit="return doCheck();" method="POST">
+                <div>头像设置:<br>
+                <img height='85' width='85' alt="<{$smarty.session.user.username}>" title="<{$smarty.session.user.username}>" src="<{if $smarty.session.user.picture=='1.jpg'}>__PUBLIC__/uploads/users/0/1.jpg<{else}>__PUBLIC__/uploads/users/<{$smarty.session.user.username}>/<{$smarty.session.user.picture}><{/if}>" class="avatar_bg">
+                <img height='50' width='50' alt="<{$smarty.session.user.username}>" title="<{$smarty.session.user.username}>" src="<{if $smarty.session.user.picture=='1.jpg'}>__PUBLIC__/uploads/users/0/1.jpg<{else}>__PUBLIC__/uploads/users/<{$smarty.session.user.username}>/<{$smarty.session.user.picture}><{/if}>" class="avatar_md">
+                                   
+                                
+                                <a href="__APP__/Users/avatar" class="btn btn-default">更新头像</a>
+                </div>
+                <div>
+                    姓名:<br>
+                        <input class="form-control input-lg" id="name" name="name" size="30" style="background:#fff;" type="text" onblur="checkName()" value="<{$smarty.session.user.name}>">
+                    
+                </div>
+                 <div>
+                    性别：<br>
+                        <input type="radio" name="sex" value="1" <{if $smarty.session.user.sex=='1'}>checked<{/if}>>男
+                        <input type="radio" name="sex" value="2" <{if $smarty.session.user.sex=='2'}>checked<{/if}>>女
+                        <input type="radio" name="sex" value="0" <{if $smarty.session.user.sex=='0'}>checked<{/if}>>保密
+                </div>
+                <div>
+                    年龄:
+                    <input name="age" size="30" type="text" value="<{$smarty.session.user.age}>" errormsg="1-100的整数">
+								
+                    
+                </div>
+                <div>
+                    我的简介:
+                    <textarea maxlength="200" name="introduce" rows="4"><{$smarty.session.user.introduce}></textarea>
+                    
+                </div>
+                    <div>
+                        <input type="submit" value="保存" />
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--end main-->
+        <{include file="../Public/foot.html"}>
+    </body>
+</html>

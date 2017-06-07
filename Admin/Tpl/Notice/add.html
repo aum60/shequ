@@ -1,0 +1,107 @@
+
+<div class="pageContent">
+
+    <script type="text/javascript" src="__PUBLIC__/js/jquery.uploadify.js"></script>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/uploadify.css">
+    <script src="__PUBLIC__/js/jquery.Jcrop.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__/css/jquery.Jcrop.css" type="text/css" />
+    <form method="post" action="__URL__/data_add/navTabId/listnotice/callbackType/closeCurrent" class="pageForm required-validate" 
+          onsubmit="return iframeCallback(this, navTabAjaxDone);">
+        <style type='text/css'>
+            .uploadify-button-text{ display: block; line-height: 30px;}
+        </style>
+        <div class="pageFormContent" layoutH="60">
+            <table>
+                <tr>
+                    <td>
+                <dl>
+                <dt>轮播图描述：</dt>
+                <dd><input type="text"  style="width:100%" name="title"/></dd></dl>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+            <dl style="height: auto">
+                <dt>图片附件：</dt>
+                <div id="showpic"></div>
+                <input type='hidden' name='showpicval' id='showpicval' >
+                <input type="hidden" id="x" name="x" />
+                <input type="hidden" id="y" name="y" />
+                <input type="hidden" id="w" name="w" />
+                <input type="hidden" id="h" name="h" />
+                <dd>
+                    <input type="file" id="file_upload" name="enclosure" size='50'  value='' />
+                </dd>
+            </dl>
+                           </td>
+                </tr>
+                <tr>
+                    <td>
+            <dl>
+                <dt>图片链接：</dt>
+                <dd><input type="text" style="width:100%" name="link"/></dd>	
+                  </td>
+                </tr>
+            </dl>
+                </table>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#file_upload').uploadify({
+            'formData': {
+                'timestamp': '<{$time}>',
+                'token': '<{$token}>',
+                'sessionid': '<{$session_id}>'
+            },
+            'swf': '__PUBLIC__/js/uploadify.swf',
+            'auto': true, //是否自动上传  
+            'uploader': '__URL__/swf_uploadpic/',
+            'fileTypeExts': '*.jpg;*.gif;*.jpeg;*.png',
+            'buttonText': '请选择',
+            'removeTimeout': 0,
+            'buttonClass': ".write",
+            'onUploadSuccess': function (file, data, respone) {
+                $("#showpicval").val(data);
+//                alert(data);
+                $("#showpic").html("<img id='cropbox' src='__PUBLIC__/Uploads/cover/" + data + "' />");
+                //调用裁剪插件
+                $('#cropbox').Jcrop({
+                    aspectRatio: 2 / 1,
+                    onSelect: updateCoords,
+                    minSize:[1000,500],
+                    setSelect:[0,50,1000,500],
+                    onRelease:function(){
+                        return;
+                    }
+                });
+            }
+        });
+        
+    })
+    function updateCoords(c){
+        $('#x').val(c.x);
+        $('#y').val(c.y);
+        $('#w').val(c.w);
+        $('#h').val(c.h);
+    }
+    ;
+
+    function checkCoords(){
+        if (parseInt($('#w').val()))
+            return true;
+        alert('Please select a crop region then press submit.');
+        return false;
+    }
+    ;
+
+</script>
+

@@ -1,0 +1,14 @@
+<?php
+//ThinkPHP框架入口
+
+//开启调试模式
+define("APP_DEBUG",true);
+
+//1.定义我们的项目名称
+define("APP_NAME","m");
+
+//2.定义当前项目的路径
+define("APP_PATH","./M/");
+ini_set('session.gc_maxlifetime', 3600 * 24 * 15);
+//3.导入入口文件
+require("./ThinkPHP/ThinkPHP.php");

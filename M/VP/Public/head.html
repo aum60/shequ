@@ -1,0 +1,59 @@
+<div class="ina_top_sq">
+        <div class="ina_silde">
+            <p class="ina_top_left">
+                <a href="http://auto.news18a.com/" title="网通社首页">网通社首页</a><span>|</span>
+                <a href="http://www.news18a.com/app/" target="_self" class="ina_app">下载APP<i class="ina_icon" style="background: rgba(0, 0, 0, 0) url('http://img.news18a.com/image/auto/170216/icon.png') no-repeat scroll 0 0;"></i></a>
+            </p>
+            <p>
+                <a href="http://www.news18a.com/about.php" title="关于网通社">关于网通社</a><span>|</span>
+                <a href="http://www.news18a.com/customers.php" title="合作媒体">合作媒体</a><span>|</span>
+                <a href="http://www.news18a.com/custom.php" title="客户信息">客户信息</a><span>|</span>
+                <a href="http://money.news18a.com" title="财经频道">财经频道</a><span>|</span>
+                <a href="http://www.news18a.com/connect.php" title="联系我们">联系我们</a><span>|</span>
+                <a href="http://auto.news18a.com/news/pay.html" title="网通社独家定制">网通社独家定制</a>
+            </p>
+        </div>
+    </div>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<div class="ina_top">
+    <div class="ina_silde">
+        <div class="ina_top_left">
+            <a href="/" class="ina_logo"><img src="http://img.news18a.com/community/image/logo.png"></a>
+            <a href="/" <{if $action_name=='index'}>class="cur"<{else}><{/if}>>首页</a>
+            <a href="__APP__/Index/boutique" <{if $action_name=='boutique'}>class="cur"<{else}><{/if}>>精华</a>
+            <a href="__APP__/Index/hot" <{if $action_name=='hot'}>class="cur"<{else}><{/if}>>热门排行</a>
+        </div>
+        <div class="ina_top_right">
+            <div class="ina_search"> 
+                <input id="search_con" placeholder="搜索文章标题" value="<{$q}>">
+                <a id="search" href="javascript:;;"><i class="ina_icon"></i></a>
+                <script type="text/javascript">
+                    $(function () {
+                        $("#search").click(function () {
+                            var search_con = encodeURIComponent(encodeURIComponent($("#search_con").val()));
+                            window.location.href = "__APP__/Index/search/q/" + search_con;
+                        });
+
+                    });
+                </script>
+            </div>
+                <{if $smarty.session.user}>
+                    <p>
+                            <a class="ina_icon ina_top_message" href="__APP__/Ucenter/mynews"><{if $ms_count neq '0'}><i></i><{/if}></a>
+                            <span><a href="__APP__/Ucenter"><{if $smarty.session.user.name}><{$smarty.session.user.name|truncate:12:'...':true}><{else}><{$smarty.session.user.username|truncate:12:'...':true}><{/if}></a></span>
+                            <a href="__APP__/Users/loginout">退出</a>
+                            <!--<em>|</em>-->
+                            <!--<a href="__APP__/Ucenter" class="ina_red">个人中心</a>-->
+                        </p>
+                        
+                <{else}>
+                <p>
+                    <a class="ina_denglu" href="__APP__/Users/login">登录</a>
+                    
+                    <a href="__APP__/Users/index">注册</a>
+                </p>
+                <{/if}>
+
+        </div>
+    </div>
+</div>

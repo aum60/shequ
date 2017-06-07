@@ -1,0 +1,130 @@
+<{include file="Public/pagerForm.html"}>
+
+<div class="pageHeader">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+    
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+                    <b>搜索</b> &nbsp; 
+                </td>
+                <td>
+                    登录名：
+                    <input type="text" name="username" size='15' value="<{$smarty.post.username}>" />
+                    昵称：
+                    <input type="text" name="name" size='15' value="<{$smarty.post.username}>" />
+                </td>
+				<td>
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+             <!--<li><a class="add" href="__URL__/detail/id/{sid_user}/navTabId/listusers" target="navTab" width="830" height="500" title="查看用户详情"><span>详情</span></a></li>-->
+             <li><a class="delete" id="all_examine"><span>批量清除头像</span></a></li>
+             <li><a class="delete" id="all_gag"><span>批量禁言</span></a></li>
+             <li><a class="edit" id="re_all_gag"><span>批量取消禁言</span></a></li>
+                        
+			<li><a class="delete" href="__URL__/delete/id/{sid_user}/navTabId/listusers" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+            <!--<li><a class="edit" href="__URL__/edit/id/{sid_user}/navTabId/listusers" target="dialog" width="500" height="520"><span>修改</span></a></li>-->
+           <!--<li><a class="add" href="__URL__/add/navTabId/listusers" target="dialog" title="添加用户"><span>添加用户</span></a></li>-->
+            <li class="line">line</li>
+            <li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+            <!--<li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab" title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>-->
+		</ul>
+	</div>
+	<table class="list" width="100%" layoutH="138">
+		<thead>
+			<tr>
+                            <th width="10"></th>
+                                <!--<th align="center" width="40" orderField="id" <{if $smarty.request._order='id'}>class=<{$smarty.request._sort}><{/if}>>ID号</th>-->
+                                <th width="70">头像</th>
+                                 <th width="20">禁言</th>
+                                <th width="150">昵称</th>
+				<th width="20">性别</th>
+
+			
+				<th width="500">介绍</th>
+				<th width="20">添加时间</th>
+
+
+			</tr>
+		</thead>
+        <tbody>
+            <{foreach $list as $vo}>
+            <tr target="sid_user" rel="<{$vo.id}>" height="50">
+                <td><input type='checkbox' name='select_deom' value="<{$vo.id}>" /></td>     
+<!--                <td><{$vo.id}></td>                -->
+                <td height='70'>
+                    <{if $vo.picture}>
+                        <img src="<{$vo.picture_path}>" height="100" />
+                    <{else}>
+                        <{if $vo.sex==1}>
+                            <img src="http://img.news18a.com/community/image/man.png" height="100" />
+                        <{else}>
+                            <img src="http://img.news18a.com/community/image/women.png" height="100" />
+                        <{/if}>
+                    <{/if}>
+                </td>
+                <td><{$vo.is_gag}></td>
+                <td><{$vo.name}></td>
+                <td>
+                    <{if $vo.sex==1}>男
+                    <{elseif $vo.sex==2}>女
+                    <{else}>未知
+                    <{/if}>
+                </td>                
+           
+ 
+                <td><{$vo.introduce}></td>
+                <td><{$vo.addtime|date_format:"%Y-%m-%d"}></td>
+                
+            </tr>
+            <{/foreach}>
+			
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+                <option value="10" <{if $numPerPage == 10}>selected<{/if}>>10</option>
+                <option value="15" <{if $numPerPage == 15}>selected<{/if}>>15</option>
+                <option value="20" <{if $numPerPage == 20}>selected<{/if}>>20</option>
+                <option value="25" <{if $numPerPage == 25}>selected<{/if}>>25</option>
+                <option value="30" <{if $numPerPage == 30}>selected<{/if}>>30</option>
+			</select>
+            <span>条，共<{$totalCount}>条</span>
+		</div>
+		
+        <div class="pagination" targetType="navTab" totalCount="<{$totalCount}>" numPerPage="<{$numPerPage}>" pageNumShown="10" currentPage="<{$currentPage}>"></div>
+
+	</div>
+</div>
+<script>
+$(function(){
+    //批量清除头像
+    $("#all_examine").click(function(){
+       var r=confirm("确定执行清除头像吗？");
+            if (r==true){
+                var str = '';
+                $("input[name='select_deom']:checked").each(function(){
+                    str += $(this).val() + ',';
+                });
+                $.post('__URL__/all_examine',{'str':str},function(data){
+                    if(data==2){
+                        alert('清除成功');
+                        navTabPageBreak();
+                    }
+                });
+            }
+    });
+});
+
+</script>

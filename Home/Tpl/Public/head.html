@@ -1,0 +1,44 @@
+<{include file="./head_top.html"}>
+<script src="http://img.news18a.com/js/jquery-1.7.2.min.js"></script>
+<div class="ina_top">
+    <div class="ina_silde">
+        <div class="ina_top_left">
+            <a href="/"><img src="http://img.news18a.com/community/image/logo.png"></a>
+            <a href="/" <{if $action_name=='index'}>class="cur"<{else}><{/if}>>首页</a>
+            <a href="__APP__/Boutique/index" <{if $action_name=='boutique'}>class="cur"<{else}><{/if}>>精华</a>
+            <!--<a href="__APP__/Activity/index" <{if $action_name=='activity'}>class="cur"<{else}><{/if}>>活动</a>-->
+            <a href="__APP__/Index/hot" <{if $action_name=='hot'}>class="cur"<{else}><{/if}>>热门排行</a>
+        </div>
+        <div class="ina_top_right">
+            <div class="ina_search">
+                <input id="search_con" placeholder="搜索文章标题">
+                <a id="search" href="javascript:;;"><i class="ina_icon"></i></a>
+                <script type="text/javascript">
+                    $(function () {
+                        $("#search").click(function () {
+                            var search_con = encodeURIComponent(encodeURIComponent($("#search_con").val()));
+                            window.location.href = "__APP__/Index/search/q/" + search_con;
+                        });
+
+                    });
+                </script>
+            </div>
+            <{if $smarty.session.user}>
+            <p>
+                <a class="ina_icon ina_top_message" href="__APP__/Ucenter/mynews"><{if $ms_count neq '0'}><i></i><{/if}></a>
+                <span><a href="__APP__/Ucenter/mymess"><{if $smarty.session.user.name}><{$smarty.session.user.name|truncate:12:'...':true}><{else}><{$smarty.session.user.username|truncate:12:'...':true}><{/if}></a></span>
+                <a href="__APP__/Users/loginout">退出</a>
+                <!--<em>|</em>-->
+                <!--<a href="__APP__/Ucenter" class="ina_red">个人中心</a>-->
+            </p>
+
+            <{else}>
+            <p>
+                <a class="ina_denglu" href="__APP__/Users/login">登录</a>
+
+                <a href="__APP__/Users/index">注册</a>
+            </p>
+            <{/if}>
+        </div>
+    </div>
+</div>

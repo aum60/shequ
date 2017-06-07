@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>极趣-精华</title>
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/170515/index.css">
+</head>
+<body class="ina_f0f0f0">
+<div class="ina_top_sq">
+    <div class="ina_silde">
+        <p class="ina_top_left">
+            <a href="http://auto.news18a.com/" title="网通社首页">网通社首页</a><span>|</span>
+            <a href="http://www.news18a.com/app/" target="_self" class="ina_app">下载APP<i class="ina_icon" style="background: rgba(0, 0, 0, 0) url('http://img.news18a.com/image/auto/170216/icon.png') no-repeat scroll 0 0;"></i></a>
+        </p>
+        <p>
+            <a href="http://www.news18a.com/about.php" title="关于网通社">关于网通社</a><span>|</span>
+            <a href="http://www.news18a.com/customers.php" title="合作媒体">合作媒体</a><span>|</span>
+            <a href="http://www.news18a.com/custom.php" title="客户信息">客户信息</a><span>|</span>
+            <a href="http://money.news18a.com" title="财经频道">财经频道</a><span>|</span>
+            <a href="http://www.news18a.com/connect.php" title="联系我们">联系我们</a><span>|</span>
+            <a href="http://auto.news18a.com/news/pay.html" title="网通社独家定制">网通社独家定制</a>
+        </p>
+    </div>
+</div>
+<script src="http://img.news18a.com/js/jquery-1.7.2.min.js"></script>
+<div class="ina_top">
+    <div class="ina_silde">
+        <div class="ina_top_left">
+            <a href="/"><img src="http://img.news18a.com/community/image/logo.png"></a>
+            <a href="/">首页</a>
+            <a href="/index.php/Boutique/index"  class="cur">精华</a>
+            <!--<a href="/index.php/Activity/index" >活动</a>-->
+            <a href="/index.php/Index/hot" >热门排行</a>
+        </div>
+        <div class="ina_top_right">
+            <div class="ina_search">
+                <input id="search_con" placeholder="搜索文章标题">
+                <a id="search" href="javascript:;;"><i class="ina_icon"></i></a>
+                <script type="text/javascript">
+                    $(function () {
+                        $("#search").click(function () {
+                            var search_con = encodeURIComponent(encodeURIComponent($("#search_con").val()));
+                            window.location.href = "__APP__/Index/search/q/" + search_con;
+                        });
+
+                    });
+                </script>
+            </div>
+            <{if $smarty.session.user}>
+            <p>
+                <a class="ina_icon ina_top_message" href="__APP__/Ucenter/mynews"><{if $ms_count neq '0'}><i></i><{/if}></a>
+                <span><a href="__APP__/Ucenter/mymess"><{if $smarty.session.user.name}><{$smarty.session.user.name|truncate:12:'...':true}><{else}><{$smarty.session.user.username|truncate:12:'...':true}><{/if}></a></span>
+                <a href="__APP__/Users/loginout">退出</a>
+                <!--<em>|</em>-->
+                <!--<a href="__APP__/Ucenter" class="ina_red">个人中心</a>-->
+            </p>
+
+            <{else}>
+            <p>
+                <a class="ina_denglu" href="__APP__/Users/login">登录</a>
+
+                <a href="__APP__/Users/index">注册</a>
+            </p>
+            <{/if}>
+        </div>
+    </div>
+</div>
+
+<div class="ina_head ina_jinghua"></div>
+<div class="ina_daohang">
+    <div class="ina_silde">
+        <a  href="/index.php/Boutique/column/best/1/pid/1/">汽车/机车</a>
+        <a  href="/index.php/Boutique/column/best/1/pid/4" >美女/爱拍</a>
+        <a  href="/index.php/Boutique/column/best/1/pid/999" >视频</a>
+    </div>
+</div>
+
+<div class="ina_silde">
+    <div class="ina_list" id="result">
+        <{foreach $list as $k => $vo}>
+        <{include file="../More/boutique.html"}>
+        <{/foreach}>
+    </div>
+    <div class="ina_more_btn">
+        <a href="javascript:;;"  id="more">查看更多兴趣<i class="ina_icon"></i></a>
+    </div>
+</div>
+<div class="ina_fixed"><a href="__APP__/Index/add" target="_blank"><img src="http://img.news18a.com/community/image/fatie.png"></a></div>
+<div class="ina_fh"><img src="http://img.news18a.com/community/image/170515/fh.png"></div>
+<script>
+    $(function(){
+
+        /**获取更多消息start****/
+        $("#more").live('click', function(){
+
+            var cont = $(".ina_list dl").length;
+            var str = '';
+            $.ajax({
+                url:'__APP__/More/boutique',
+                type:'get',
+                dataType:'json',
+                data:{
+                    pid:"<{$pid}>",
+                    go:cont
+                },
+
+                beforeSend: function () {
+                    //给用户提供友好状态提示
+                    $(".ina_more_btn").text('正在加载中...');
+                },
+
+                success:function(data){
+                    var len = data.length;
+                    for(var i=0; i<len; i++){
+                        str = data[i];
+                        $("#result").append(str);
+                    }
+
+                    //加载图片
+                    loadImage();
+
+                    if(len<10){
+                        $(".ina_more_btn").text("没有更多内容了~");
+                    }else{
+                        //让点击按钮重新有效
+                        $(".ina_more_btn").html('<a href="javascript:;;" id="more">查看更多兴趣<i class="ina_icon"></i></a>');
+                    }
+
+                }
+            });
+        });
+        /*******end*********/
+
+    });
+
+
+</script>
+<{include file="../Public/foot.html"}>
+</body>
+</html>

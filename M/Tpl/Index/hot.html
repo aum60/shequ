@@ -1,0 +1,152 @@
+<{include file="../Public/head.html"}>
+<body>
+<div class="ina_head">
+    <a href="__APP__/Index/index" class="ina_prev"><img src="https://img.news18a.com/community/mobile/image/prev.png"></a>
+    <div class="ina_search"><input  placeholder="搜索文章标题" id="search_con" value=""/><a href="javascript:sousuo();"><i class="ina_icon"></i></a></div>
+</div>
+<div class="ina_sydaohang ina_white">
+    <a href="__APP__/Index/index">精华</a>
+    <a href="__APP__/Index/hot/time/week" class="ina_cur">热门排行</a>
+    <{foreach $cat as $vv}>
+    <a href="__APP__/Index/column/pid/<{$vv.id}>" <{if $vv.id == $pid}>class="ina_cur"<{else}><{/if}>><{$vv.name}></a>
+    <{/foreach}>
+</div>
+<div class="ina_phdate">
+    <{if $col=='pl'}>
+    <a href="__APP__/Index/hot/time/week/col/pl" <{if $time=='week'}>class="ina_cur"<{/if}>>周</a>
+    <a href="__APP__/Index/hot/time/month/col/pl" <{if $time=='month'}>class="ina_cur"<{/if}>>月</a>
+    <a href="__APP__/Index/hot/col/pl" <{if $time==''}>class="ina_cur"<{/if}>>总</a>
+    <{else}>
+    <a href="__APP__/Index/hot/time/week" <{if $time=='week'}>class="ina_cur"<{/if}>>周</a>
+    <a href="__APP__/Index/hot/time/month" <{if $time=='month'}>class="ina_cur"<{/if}>>月</a>
+    <a href="__APP__/Index/hot/time/all" <{if $time=='all'}>class="ina_cur"<{/if}>>总</a>
+    <{/if}>
+</div>
+<div class="ina_list" id="messid">
+    <{foreach $list as $k => $vo}>
+    <dl>
+        <a href="__APP__/Index/show/id/<{$vo.id}>">
+            <dd>
+                <div class="ina_photo"><img src="<{$vo.picture_path}>"><{$vo.username}></div>
+                <div class="ina_date"><i class="ina_icon"></i><{$vo.addtime}></div>
+            </dd>
+            <dt>
+                <img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$vo.cover2}>">
+                <{if $vo.isbest==1}><em><i>精</i></em><{/if}>
+                <p><{$vo.title}></p>
+            </dt>
+            <dd class="ina_m12">
+                <div class="ina_label">
+                    <{foreach $vo['class_name'] as $vvv}>
+                    <span class="ina_label<{$vvv.class_num}>"><{$vvv.class_name}></span>
+                    <{/foreach}>
+                </div>
+
+                <div class="ina_list_bottom">
+                    <p><span><i class="ina_icon ina_read"></i><{$vo.scan}></span><span><i class="ina_icon ina_message"></i><{$vo.pl_num}></span><span><i class="ina_icon ina_roar"></i><{$vo.znum}></span></p>
+                </div>
+            </dd>
+        </a>
+    </dl>
+    <{/foreach}>
+</div>
+
+<{include file="../Public/footer.html"}>
+<div class="ina_fhtop">
+    <a href="http://www.news18a.com/app/download.php"><span>下载<br>APP</span></a>
+    <a href="javascript:;" class="ina_fh_top"><span>顶部</span></a>
+</div>
+<script>
+
+if($(".ina_fh_top").length>0){
+    $(".ina_fh_top").click(function(){
+        $("html,body").animate({scrollTop:0});
+    })
+}
+(function(){
+    var _top=$(".ina_sydaohang").offset().top;
+    $(window).scroll(function(){
+        if($(window).scrollTop()>=_top){
+            $(".ina_sydaohang").css({position:"fixed",top:"0",left:"0",zIndex:999});
+            $(".ina_sydaohang").next().css({paddingTop:$(".ina_sydaohang").height()+12});
+        }
+        else{
+            $(".ina_sydaohang").css({position:"static"});
+            $(".ina_sydaohang").next().css({paddingTop:0});
+        }
+    })
+})();
+
+var page = <{$page}>;
+
+function more(col){
+    var pid='';
+    if (col=='') {
+        if ('<{$time}>'=='week') {
+            pid=61;
+        }else if('<{$time}>'=='month'){
+            pid=62;
+        }else{
+            pid=6;
+        }
+
+    }else{
+        if ('<{$time}>'=='week') {
+            pid=71;
+        }else if('<{$time}>'=='month'){
+            pid=72;
+        }else{
+            pid=7;
+        }
+    }
+
+    $.ajax({
+        type: "get",//数据提交的类型（post或者get）
+        url: "__APP__/Index/ajax_more",//数据提交得地址
+        data: {pid:pid,p:page},//提交的数据(自定义的一些后台程序需要的参数)
+        dataType: "json",//返回的数据类型
+        success: function(data){//请求成功后返执行的方法（这里处理添加五条的数据 data为处理之后的返回数据）
+
+            var str = "";
+            page = data.p;
+            $.each(data.list,function(a,b){//循环遍历返回的json数据
+                //str += "第"+(a+1)+"条数据:" + b;//将json数据拼接成字符串
+                str='<dl><a href="__APP__/Index/show/id/'+b.id+'"><dt><img src="'+b.cover2+'">';
+                if (b.isbest==1) {
+                    str+='<em><i>精</i></em>';
+                };
+                str+='<p>'+b.addtime+'</p></dt><dd><h3>'+b.title+'</h3><div class="ina_label">';
+                $.each(b.class_name,function(k,v){
+                    str+='<span class="ina_label1">'+v.class_name+'</span>';
+                });
+                str+='</div><div class="ina_list_bottom"><div class="ina_photo"><img src="'+b.picture_path+'">'+b.username+'</div>';
+                if (col=='pl') {
+                    str+='<p><span><i class="ina_icon ina_message"></i>'+b.pl_num+'</span></p></div></dd></a></dl>';
+                }else{
+                    str+='<p><span><i class="ina_icon ina_read"></i>'+b.scan+'</span></p></div></dd></a></dl>';
+                }
+                $("#messid").append(str);
+            });
+            if (data.wu==1) {
+                var div_jiazai=document.getElementById('jiazai');
+                div_jiazai.style.display="none";
+            }
+
+        }
+
+    })
+
+}
+
+function sousuo(){
+    var search_con = encodeURIComponent(encodeURIComponent($("#search_con").val()));
+    if (search_con=='') {
+        alert('请输入文章标题');
+        return;
+    }else{
+        window.location.href = "__APP__/Index/search/q/" + search_con;
+    }
+}
+</script>
+</body>
+</html>

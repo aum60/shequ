@@ -1,0 +1,119 @@
+<{include file="../Public/head.html"}>
+<body>
+<div class="ina_head">
+    <a href="__APP__/Index/index" class="ina_prev"><img src="https://img.news18a.com/community/mobile/image/prev.png"></a>
+    <div class="ina_search"><input placeholder="搜索文章标题" id="search_con" value=""/><a href="javascript:sousuo();"><i class="ina_icon"></i></a></div>
+</div>
+<div class="ina_banner">
+    <{if $lanmu_info.id eq 1}>
+    <img src="http://img.news18a.com/community/image/head2.jpg">
+    <{else if $lanmu_info.id eq 2}>
+    <img src="http://img.news18a.com/community/image/head8.jpg">
+    <{else if $lanmu_info.id eq 3}>
+    <img src="http://img.news18a.com/community/image/head7.jpg">
+    <{else if $lanmu_info.id eq 4}>
+    <img src="http://img.news18a.com/community/image/head6.jpg">
+    <{else if $lanmu_info.id eq 5}>
+    <img src="http://img.news18a.com/community/image/head4.jpg">
+    <{else if $lanmu_info.id eq 6}>
+    <img src="http://img.news18a.com/community/image/head3.jpg">
+    <{else if $lanmu_info.id eq 7}>
+    <img src="http://img.news18a.com/community/image/head9.jpg">
+    <{else if $lanmu_info.id eq 8}>
+    <img src="http://img.news18a.com/community/image/head1.jpg">
+    <{else if $lanmu_info.id eq 999}>
+    <img src="http://img.news18a.com/community/image/head10.jpg">
+    <{else}>
+    <img src="http://img.news18a.com/community/image/head5.jpg">
+    <{/if}>
+</div>
+<div class="ina_sydaohang">
+    <a href="__APP__/Index/index">精华</a>
+    <a href="__APP__/Index/hot/time/week">热门排行</a>
+    <{foreach $cat as $vv}>
+    <a href="__APP__/Index/column/pid/<{$vv.id}>" <{if $vv.id == $pid}>class="ina_cur"<{else}><{/if}>><{$vv.name}></a>
+    <{/foreach}>
+</div>
+<div class="ina_list" id="messid">
+    <{foreach $list as $k => $vo}>
+    <dl>
+        <a href="__APP__/Index/show/id/<{$vo.id}>">
+            <dd>
+                <div class="ina_photo"><img src="<{$vo.picture_path}>"><{$vo.username}></div>
+                <div class="ina_date"><i class="ina_icon"></i><{$vo.addtime}></div>
+            </dd>
+            <dt>
+                <img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$vo.cover2}>">
+                <{if $vo.isbest==1}><em><i>精</i></em><{/if}>
+                <p><{$vo.title}></p>
+            </dt>
+            <dd class="ina_m12">
+                <div class="ina_label">
+                    <{foreach $vo['class_name'] as $vvv}>
+                    <span class="ina_label<{$vvv.class_num}>"><{$vvv.class_name}></span>
+                    <{/foreach}>
+                </div>
+                <div class="ina_list_bottom">
+                    <p><span><i class="ina_icon ina_read"></i><{$vo.scan}></span><span><i class="ina_icon ina_message"></i><{$vo.pl_num}></span><span><i class="ina_icon ina_roar"></i><{$vo.znum}></span></p>
+                </div>
+            </dd>
+        </a>
+    </dl>
+    <{/foreach}>
+</div>
+<div class="ina_btn ina_backgroundno" id="jiazai"><a href="javascript:more(<{$where}>);">点击加载更多<i class="ina_icon"></i></a></div>
+<{include file="../Public/footer.html"}>
+<{include file="../Public/right_side.html"}>
+<script>
+
+if($(".ina_fh_top").length>0){
+    $(".ina_fh_top").click(function(){
+        $("html,body").animate({scrollTop:0});
+    })
+}
+(function(){
+    var _top=$(".ina_sydaohang").offset().top;
+    $(window).scroll(function(){
+        if($(window).scrollTop()>=_top){
+            $(".ina_sydaohang").css({position:"fixed",top:"0",left:"0",zIndex:999});
+            $(".ina_sydaohang").next().css({paddingTop:$(".ina_sydaohang").height()+12});
+        }
+        else{
+            $(".ina_sydaohang").css({position:"static"});
+            $(".ina_sydaohang").next().css({paddingTop:0});
+        }
+    })
+})();
+
+function sousuo(){
+    var search_con = encodeURIComponent(encodeURIComponent($("#search_con").val()));
+    window.location.href = "__APP__/Index/search/q/" + search_con;
+}
+
+
+function more(){
+    var cont = $("#messid dl").length;
+    var str = '';
+    $.ajax({
+        url:'__APP__/More/column',
+        type:'get',
+        dataType:'json',
+        data:{
+            pid:"<{$pid}>",
+            go:cont
+        },
+        success:function(data){
+            var len = data.length;
+            if(len<10){$(".ina_btn a").replaceWith('<a href="javascript:;;");>暂无更多~</a>');}
+            for(var i=0; i<len; i++){
+                str = data[i];
+                $("#messid").append(str);
+            }
+                lazy();
+        }
+    });
+}
+
+</script>
+</body>
+</html>

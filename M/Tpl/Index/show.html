@@ -1,0 +1,228 @@
+<{include file="../Public/head.html"}>
+<body>
+<div class="ina_top_news">
+    <div class="ina_top_img"><img src="<{$list.banner}>"></div>
+    <a href="javascript:fanhui();"  class="ina_prev"><img src="http://img.news18a.com/community/mobile/image/pre.png"></a>
+    <a href="javascript:;" class="ina_share"><i class="ina_icon"></i></a>
+    <p><span><{$list.title}></span></p>
+    <{if $list.isbest eq 1}>
+    <div class="ina_jing">
+        <span>精华</span>
+    </div>
+    <{/if}>
+</div>
+<div class="ina_newsbt">
+    <div class="ina_label">
+        <{foreach $list['class_name'] as $vvv}>
+        <span class="ina_label<{$vvv.class_num}>"><{$vvv.class_name}></span>
+        <{/foreach}>
+    </div>
+    <p><span><i class="ina_icon ina_read"></i><{$list.pageView}></span><span><i class="ina_icon ina_message"></i><{$list.pl_num}></span><span><i class="ina_icon ina_roar"></i><{$list.z_num}></span></p>
+</div>
+<div class="ina_silde">
+    <{$list.content}>
+</div>
+<div class="ina_end">
+    <span>全文完</span>
+</div>
+<div class="ina_news_author">
+    <dl>
+        <dt><img src="<{$list.picture_path}>"></dt>
+        <dd>
+            <h3><{$list.username}></h3>
+            <span>发布于 <{$list.addtime}></span>
+            <p><{$list.introduce}></p>
+        </dd>
+    </dl>
+</div>
+<div class="ina_comment">
+    <div class="ina_bt">精彩评论</div>
+    <{foreach $comments as $com}>
+    <{if $com.id_path == ''}>
+    <dl>
+        <dt><img src="<{$com.tx}>"></dt>
+        <dd>
+            <div class="ina_comment_top">
+                <h3><{$com.user}></h3>
+                <span><{$com.sj}></span>
+                <div class="ina_zan"><i class="ina_icon"></i><{$com.num}></div>
+            </div>
+            <div class="ina_comment_bottom"><{$com.content}></div>
+            <{if $com.len > 100}>
+            <div class="ina_zhankai">展开评论</div>
+            <{/if}>
+        </dd>
+    </dl>
+    <{else}>
+    <dl>
+        <dt><img src="<{$com.tx}>"></dt>
+        <dd>
+            <div class="ina_comment_top">
+                <h3><{$com.user}></h3>
+                <span><{$com.sj}></span>
+                <div class="ina_zan"><i class="ina_icon"></i><{$com.num}></div>
+                <!--<p>5楼</p>-->
+            </div>
+            <div class="ina_comment_bottom"><{$com.content}></div>
+            <{if $com.len > 100}>
+            <div class="ina_zhankai">展开评论</div>
+            <{/if}>
+            <div class="ina_zan"><i class="ina_icon"></i><{$com.num}></div>
+            <ul>
+                <li>
+                    <img src="<{$com.parent_tx}>">
+                    <div class="ina_ypl">
+                        <span>原评论：<b><{$com.parent_user}></b></span>
+                        <span>1天前</span>
+
+                        <!--<p>5楼</p>-->
+                    </div>
+                    <div class="ina_comment_bottom"><{$com.parent_content}></div>
+                    <{if $com.parent_len > 100}>
+                    <div class="ina_zhankai">展开评论</div>
+                    <{/if}>
+                </li>
+            </ul>
+        </dd>
+    </dl>
+    <{/if}>
+    <{/foreach}>
+    <div class="ina_plbtn"><a href="http://www.news18a.com/app/download.php">查看更多评论，请下载大料汽车app</a></div>
+</div>
+<div class="ina_tjread">
+    <div class="ina_bt">推荐阅读</div>
+    <{foreach $tjmess as $k => $vo}>
+    <dl>
+        <a href="__APP__/Index/show/id/<{$vo.id}>">
+            <dt>
+                <img src="<{$vo.cover2}>">
+            </dt>
+            <dd>
+                <h3><{$vo.title}></h3>
+            </dd>
+        </a>
+    </dl>
+    <{/foreach}>
+</div>
+<{include file="../Public/footer.html"}>
+<div class="ina_fhtop">
+    <a href="/m.php"><span><i class="ina_icon"></i>首页</span></a>
+    <a href="javascript:;" class="ina_fh_top"><span>顶部</span></a>
+</div>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://img.news18a.com/js/iwt/iwt-min.js"></script>
+<script>
+
+    <!--分享功能start-->
+
+    var host = window.location.host,
+            url = window.location.href,
+            title = '<{($list.title)}>',
+            desc = '<{($list.title)}>',
+            pic = "<{($list.banner)}>",
+            id = '<{($list.id)}>';
+
+    url = url.replace("&", "%26");
+    $.getJSON('http://api.news18a.com/init.php?m=api&c=share&a=wxapi&url=' + url + '&callback=?', function(data) {
+        if(data) {
+            wx.config({
+                debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                appId: data.appId, // 必填，公众号的唯一标识
+                timestamp: data.timestamp, // 必填，生成签名的时间戳
+                nonceStr: data.nonceStr, // 必填，生成签名的随机串
+                signature: data.signature,// 必填，签名，见附录1
+                jsApiList: [
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage',
+                    'onMenuShareQQ',
+                    'onMenuShareWeibo',
+                    'onMenuShareQZone'
+                ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            });
+
+            wx.ready(function () {
+                wx.onMenuShareTimeline({
+                    title: title, // 分享标题
+                    link: url, // 分享链接
+                    imgUrl: pic // 分享图标
+                });
+
+                wx.onMenuShareAppMessage({
+                    title: title, // 分享标题
+                    desc: desc, // 分享描述
+                    link: url, // 分享链接
+                    imgUrl: pic, // 分享图标
+                    type: '', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '' // 如果type是music或video，则要提供数据链接，默认为空
+                });
+
+                wx.onMenuShareQQ({
+                    title: title, // 分享标题
+                    desc: desc, // 分享描述
+                    link: url, // 分享链接
+                    imgUrl: pic // 分享图标
+                });
+
+                wx.onMenuShareWeibo({
+                    title: title, // 分享标题
+                    desc: desc, // 分享描述
+                    link: url, // 分享链接
+                    imgUrl: pic // 分享图标
+                });
+
+                wx.onMenuShareQZone({
+                    title: title, // 分享标题
+                    desc: desc, // 分享描述
+                    link: url, // 分享链接
+                    imgUrl: pic // 分享图标
+                });
+            });
+        }
+    });
+    <!--分享功能end-->
+
+if($(".ina_top_news").length>0){
+    $(".ina_top_news,.ina_top_news p").height($(window).width()/2);
+    $(window).resize(function(){
+        $(".ina_top_news,.ina_top_news p").height($(window).width()/2);
+    })
+}
+if($(".ina_fh_top").length>0){
+    $(".ina_fh_top").click(function(){
+        $("html,body").animate({scrollTop:0});
+    })
+}
+if($(".ina_zhankai").length>0){
+    $(".ina_zhankai").click(function(){
+        $(this).siblings('.ina_comment_bottom').css({maxHeight:"none"});
+        $(this).remove();
+    })
+}
+if($(".ina_share").length>0){
+    $(".ina_share").click(function(){
+        $("body").append("<div class='ina_zhezhao'><img src='http://img.news18a.com/community/mobile/image/bg.png' onclick='$(this).parents(\".ina_zhezhao\").remove();'></div>");
+    })
+}
+
+function fanhui(){
+    window.history.go(-1);
+}
+
+    $(function() {
+        window.onload = window.onresize = function () {
+            resizeIframe();
+        }
+
+        var resizeIframe = function () {
+            var bodyw = document.body.clientWidth;
+            for (var ilength = 0; ilength <= document.getElementsByTagName("iframe").length; ilength++) {
+                document.getElementsByTagName("iframe")[ilength].height = bodyw * 9 / 16;//设定高度
+                document.getElementsByTagName("iframe")[ilength].width = bodyw-20;//设定宽度
+            }
+        }
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>个人中心-极趣</title>
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/index.css">
+</head>
+<body class="ina_f5f5f5">
+<{include file="../Public/head.html"}>
+
+<div class="ina_silde">
+    <{include file="../Public/cuser_left.html"}>
+    <div class="ina_center_right">
+        <div class="ina_center_daohang">
+            <ul>
+                <li class="ina_cur"><a href="__APP__/Ucenter">个人中心</a></li>
+                <li><a href="__APP__/Ucenter/mylike">我的收藏</a></li>
+                <li><a href="__APP__/Ucenter/mymess">我的帖子</a></li>
+                <li><a href="__APP__/Ucenter/myfri">我的关注</a></li>
+                <li><a href="__APP__/Ucenter/myfans">我的粉丝</a></li>
+            </ul>
+        </div>
+        <div class="ina_grxx">
+            <div class="ina_centerbt">
+                <h3>个人信息</h3>
+                <span><a href="__APP__/Ucenter/user_info_edit">编辑</a></span>
+            </div>
+            <dl>
+                <dd><span>生日：<{$user.birthday}></span><span>省份：<{$user.province}></span><span>城市：<{$user.city}></span></dd>
+                <dd>兴趣：
+                    <{foreach $user.interest as $v}>
+                    <span><{$v.name}></span>
+                    <{/foreach}>
+                </dd>
+            </dl>
+        </div>
+        <div class="ina_centerright_box">
+            <div class="ina_centerbt">
+                <h3>我发布的帖子</h3>
+                <span><a href="__APP__/Ucenter/mymess" class="ina_more">>></a></span>
+            </div>
+            <div class="ina_list">
+                <{if $list}>
+                <{foreach $list as $v}>
+                <dl>
+                    <dt><a href="__APP__/Index/show/id/<{$v.id}>" target="_blank"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$v.cover2}>" /></a>
+                        <span style="display: none;" data="<{$v.id}>">×</span>
+                        <{if $v.isbest}><em><i>精</i></em><{/if}>
+                    </dt>
+                    <dd>
+                        <div class="ina_label">
+                            <!--<span class="ina_label<{$v.class_id}>"><{$v.p_name}></span>-->
+                            <p style="float:left; padding:0 5px; 
+                               <{if $v.status=='已审核'}>
+                               border:1px solid #44c903; color: #44c903;
+                               <{else if $v.status=='未审核'}>
+                               border:1px solid #ffc12d;color:#ffc12d;
+                               <{/if}>
+                               "><{$v.status}></p>
+                            <p><i class="ina_icon"></i><{$v.addtime}></p>
+                        </div>
+                        <h3><a href="__APP__/Index/show/id/<{$v.id}>" target="_blank"><{$v.title}></a></h3>
+                    </dd>
+                </dl>
+                <{/foreach}>
+                <{else}>
+                <div class="ina_centerright_boxno">
+                <img src="http://img.news18a.com/community/image/tiezi.jpg">
+                <span>DA爷今天心情不错，<a href="/index.php/Index/add" target="_blank">发个帖子</a>去O(∩_∩)</span>
+                </div>
+                <{/if}>
+            </div>
+        </div>
+        <{if $list2}>
+        <div class="ina_centerright_box">
+            <div class="ina_centerbt">
+                <h3>我的草稿箱</h3>
+                <span><a href="javascript:;;" class="ina_more">>></a></span>
+            </div>
+            <div class="ina_list">
+                
+                <{foreach $list2 as $v}>
+                <dl>
+                    <dt><a href="__APP__/Index/edit/id/<{$v.id}>" target="_blank"><{if $v.cover2_path}><img src="<{$v.cover2}>"><{else}><img src="http://img.news18a.com/community/image/lazyload_324.jpg"><{/if}></a><span style="display: none;" data="<{$v.id}>">×</span></dt>
+                    <dd>
+                        <div class="ina_label">
+                            <!--<span class="ina_label<{$v.class_id}>"><{$v.p_name}></span>-->
+                            <p style="float:left; padding:0 5px;border:1px solid #7dd2ec;color:#7dd2ec;"><{$v.status}></p>
+                            <p><i class="ina_icon"></i><{$v.addtime}></p>
+                        </div>
+                        <h3><a href="__APP__/Index/edit/id/<{$v.id}>" target="_blank"><{$v.title}></a></h3>
+                    </dd>
+                </dl>
+                <{/foreach}>
+                
+                
+            </div>
+        </div>
+        <{/if}>
+        
+        <{if $list_wtg}>
+        <div class="ina_centerright_box">
+            <div class="ina_centerbt">
+                <h3>未通过审核的帖子</h3>
+                <span><a href="__APP__/Ucenter/mymess" class="ina_more">>></a></span>
+            </div>
+            <div class="ina_list">
+                
+                <{foreach $list_wtg as $v}>
+                <dl>
+                    <dt><a href="__APP__/Index/edit/id/<{$v.id}>" target="_blank"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$v.cover2}>" /></a><span style="display: none;" data="<{$v.id}>">×</span><{if $v.isbest}><em><i>精</i></em><{/if}></dt>
+                    <dd>
+                        <div class="ina_label">
+                            <p style="float:left; padding:0 5px;border:1px solid #fa5a17;color:#fa5a17;"><{$v.status}></p>
+                            <p style="float:left; padding:0 10px; position: relative;cursor: pointer;" class="show_keys">?
+                                <span style="position: absolute; cursor: pointer; display: none;left:25px; top: 0; z-index: 9; width: 110px; background: #FFF; border:1px solid #fa5a17;color:#fa5a17;">由于不符合发布要求</span>  
+                            </p>
+                            <p style="float: right;"><i class="ina_icon"></i><{$v.addtime}></p>
+                        </div>
+                        <h3><a href="__APP__/Index/edit/id/<{$v.id}>" target="_blank"><{$v.title}></a></h3>
+                    </dd>
+                </dl>
+                <{/foreach}>
+                
+                
+            </div>
+        </div>
+        
+        <{/if}>
+        
+        
+        
+    </div>
+</div>
+<div class="ina_fixed"><a href="__APP__/Index/add" target="_blank"><img src="http://img.news18a.com/community/image/fatie.png"></a></div>
+<script>
+$(".ina_list dl dt").live("mouseover",function(){
+    $(this).find("span").show();
+})
+$(".ina_list dl dt").live("mouseout",function(){
+    $(this).find("span").hide();
+})
+$(".ina_list dl dt span").live("click",function(){ 
+    var _this = $(this);
+    ina_tksure("提示信息","确定要删除帖子吗？",function(_this){
+        var id = _this.attr('data');
+        $.post("/index.php/Index/del_mess",{"id":id},function(res){
+            if(res==1){
+                _this.parents("dl").remove();
+                $(".ina_zhezhao").css("display","none");
+                $(".ina_tksure").css("display","none");
+            }
+        });
+    },_this); 
+});
+ 
+function ina_tk(str,btn,href){
+    var height=$(window).height();
+    if(href==undefined||href==null){href="javascript:;"}
+    var html="<div class='ina_tkbg' style='height:"+height+"px'></div><div class='ina_tk'><a href='javascript:;' class='ina_close'>&times;</a><p>"+str+"</p><div class='ina_tkbtn'><i></i><a href='"+href+"'>"+btn+"</a></div></div>";
+    $("body").append(html)
+    $(".ina_tkbg,.ina_close,.ina_tk .ina_tkbtn a").live("click",function(){
+        $(".ina_tk,.ina_tkbg").remove();
+    })
+}
+</script>
+<script src="http://img.news18a.com/community/js/public.js"></script>
+<script>
+    $("img").lazyload({effect:"fadeIn"});
+    $(".show_keys").hover(function(){
+        $(this).find("span").slideDown(100);
+    },function(){
+        $(this).find("span").slideUp(100);
+    });
+</script>
+<{include file="../Public/foot.html"}>
+</body>
+</html>
