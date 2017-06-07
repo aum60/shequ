@@ -1,8 +1,0 @@
-<div class="ina_daohang">
-        <ul>
-            <li <{if empty($pid)}>class="ina_cur"<{else}><{/if}>><a href="__APP__">最新</a></li>
-            <{foreach $cat as $ty }>
-            <li <{if $ty.id == $pid}>class="ina_cur"<{else}><{/if}>><a href="__APP__/Index/column/pid/<{$ty.id}>" target="_blank"><{$ty.name}></a></li>
-            <{/foreach}>
-        </ul>
-    </div>

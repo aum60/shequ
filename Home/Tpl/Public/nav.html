@@ -1,8 +1,0 @@
-<div class="ina_daohang">
-    <div class="ina_silde">
-        <{if $action_name != 'boutique'}><a <{if empty($pid)}>class="ina_cur"<{else}><{/if}> href="__APP__">最新文章</a><{/if}>
-        <{foreach $cat as $ty }>
-        <a <{if $ty.id == $pid}>class="ina_cur"<{else}><{/if}> href="__APP__/Index/column/pid/<{$ty.id}>" target="_blank"><{$ty.name}></a>
-        <{/foreach}>
-    </div>
-</div>
