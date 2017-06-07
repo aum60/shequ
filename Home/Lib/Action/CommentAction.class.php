@@ -43,7 +43,7 @@ class CommentAction extends Action
 
         $this->assign('action_name', ACTION_NAME);
         $this->assign('module_name', MODULE_NAME);
-//        $this->assign('ACTION_NAME','');
+
         //消息数量显示
         $this->hfnum();
     }

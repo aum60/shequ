@@ -31,10 +31,9 @@
     <div class="ina_silde">
         <div class="ina_hot_bt"><h3><i class="ina_icon"></i>热门活动</h3><a href="#" class="ina_more" style="display: none"><i class="ina_icon"></i></a></div>
         <ul>
-            <li><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></li>
-            <li><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></li>
-            <li><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></li>
-            <li><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></li>
+            <{foreach $activity as $vo}>
+            <li><a href="__APP__/Index/show/id/<{$vo.id}>" target="_blank"><img src="http://img.news18a.com/community/image/list.jpg" data-original="<{$vo.cover2}>" /></a></li>
+            <{/foreach}>
         </ul>
     </div>
 </div>
@@ -102,7 +101,7 @@
 
     $(".ina_focus_tab ul li").live('click',function(){
         //加载图片
-        loadImage();
+//        loadImage();
     });
 
 
@@ -119,6 +118,7 @@
             })
         }
     }
+
 
 </script>
 <{include file="../Public/foot.html"}>
