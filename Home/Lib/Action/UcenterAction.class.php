@@ -615,7 +615,6 @@ class UcenterAction extends CommentAction {
     //添加关注
     public function add_attention() {
 
-        demo(111);
         $tmp_array_res = array();
 
         if ($_SESSION[C('USER_AUTH_KEY')]['id']) {
@@ -1000,7 +999,7 @@ Eof;
      */
     public function check_user()
     {
-        if(ACTION_NAME == 'uspace'){
+        if(in_array(ACTION_NAME,array('uspace','add_attention'))){
             return true;
         }elseif ($_SESSION[C('USER_AUTH_KEY')]['id']) {
             //登录用户的id
