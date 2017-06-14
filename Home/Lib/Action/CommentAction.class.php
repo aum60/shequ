@@ -219,7 +219,7 @@ class CommentAction extends Action
         if ($sizeproportion == 1) {
             $w = 1000;
         } else if ($sizeproportion == 2) {
-            $w = 900;
+            $w = 600;
         } else if ($sizeproportion == 3) {
             $w = 200;
         }
@@ -317,6 +317,7 @@ class CommentAction extends Action
                 die;
             }
             $h = intval(floatval(sprintf("%.1f", floatval(150 / $width))) * $height);
+
 
 //            if ($h < 150) {
 //                $h = 150;
@@ -1008,8 +1009,8 @@ class CommentAction extends Action
         if ($this->_Redis)
             return true;
         $this->_Redis = new \Redis;
-//        $this->_Redis->connect('10.15.200.22', '6379');
-        $this->_Redis->connect('10.19.200.56', '6379');
+        $this->_Redis->connect('127.0.0.1', '6379');
+//        $this->_Redis->connect('10.19.200.56', '6379');
     }
 
     /**

@@ -58,7 +58,6 @@
             var _this = $(this);
             $.post("/index.php/Ucenter/add_attention", {'id': id}, function (data) {
                 data_json = eval("(" + data + ")");
-                alert(data_json);
                 if (data_json.res == 1) {
                     if (data_json.status == 1) {//互粉
                         _this.attr("class", "quxiao ina_huguanzhu");
@@ -93,7 +92,7 @@
         });
 
 
-        $(".ina_more_btn a").click(function () {
+        $(".ina_more_btn a").live('click', function () {
             var cont = $(".ina_list_search dl").length;
             var str = '';
             $.ajax({
@@ -104,16 +103,28 @@
                     go: cont,
                     uid: "<{$user.id}>"
                 },
+
+                beforeSend: function () {
+                    //给用户提供友好状态提示
+                    $(".ina_more_btn").text('正在加载中...');
+                },
+
                 success: function (data) {
                     var len = data.length;
-                    if (len < 10) {
-                        $(".ina_more_btn a").replaceWith("没有更多内容了~");
-                    }
+
                     for (var i = 0; i < len; i++) {
                         str = data[i];
                         $("#result").append(str);
                     }
                     loadImage();
+
+                    if(len<15){
+                        $(".ina_more_btn").text("没有更多内容了~");
+                    }else{
+                        //让点击按钮重新有效
+                        $(".ina_more_btn").html('<a href="javascript:;;" id="more">查看更多兴趣<i class="ina_icon"></i></a>');
+                    }
+
                 }
             });
         });

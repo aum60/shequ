@@ -52,7 +52,9 @@ class IndexAction extends CommentAction {
         $where['id'] = array('in',$IDs);
         $where['status'] = '1';
 
+        //首页活动
         $activity = M('Message')->where($where)->limit(4)->order('addtime desc')->select();
+
         $list2 = M('Message')->where('status = 1')->limit(0 . "," . $this->listRows)->order('addtime desc')->select();
 
         foreach ($activity as &$vo) {
@@ -120,7 +122,7 @@ class IndexAction extends CommentAction {
         $this->assign("where", $_GET);
         //===============================================  
         //调取首页轮播图
-        $row_list = M('PictureManagement')->where('status=2')->order('addtime desc')->limit(3)->select();
+        $row_list = M('PictureManagement')->where('status=2')->order('addtime desc')->limit(5)->select();
         if ($row_list) {
             foreach ($row_list as &$v) {
                 $v['cover'] = $this->ftp_img_path . $v['picture'];

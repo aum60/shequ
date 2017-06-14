@@ -1,0 +1,86 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>极趣社区-搜索</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="format-detection" content="address=no" />
+<meta name="format-detection" content="date=no" />
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/mobile/css/index_170517.css">
+<script src="http://img.news18a.com/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="ina_head">
+    <a href="javascript:fanhui();" class="ina_prev"><img src="http://img.news18a.com/community/mobile/image/prev.png"></a>
+    <span class="ina_head_bt">搜索</span>
+</div>
+<div class="ina_searchnr"><input value="<{$q}>" id="search_con_nav"/><a href="javascript:;"><i class="ina_icon" id="search_nav"></i></a></div>
+<div class="ina_list" id="messid">
+    <{if $list}>
+    <{foreach $list as $k => $vo}>
+    <{include file="../More/search.html"}>
+    <{/foreach}>
+    <{else}>
+    <div class="ina_search_no">
+        <img src="http://img.news18a.com/community/image/search.png">
+        <p>目前还没有<{if $q}>“<{$q}>”的<{/if}>相关帖子，<br>您可以<a href="http://www.news18a.com/app/download.php">下载APP</a>首发帖子留下历史首创足迹^_^</p>
+    </div>
+    <{/if}>
+</div>
+<{if $count>20}> <div class="ina_btn" id="jiazai"><a href="javascript:more();">点击加载更多<i class="ina_icon"></i></a></div><{/if}>
+<{include file="../Public/footer.html"}>
+<div class="ina_fhtop">
+    <a href="http://www.news18a.com/app/download.php"><span>下载<br>APP</span></a>
+    <a href="javascript:;" class="ina_fh_top"><span>顶部</span></a>
+</div>
+<script>
+if($(".ina_fh_top").length>0){
+    $(".ina_fh_top").click(function(){
+        $("html,body").animate({scrollTop:0});
+    })
+}
+
+$(function () {
+    $("#search_nav").click(function () {
+        var search_con_nav = encodeURIComponent(encodeURIComponent($("#search_con_nav").val()));
+        window.location.href = "__APP__/Index/search/q/" + search_con_nav;
+    });
+
+});
+function fanhui(){
+    window.history.go(-1);
+}
+
+var page = <{$page}>;
+var keyword=encodeURIComponent('<{$q}>');
+function more(){
+
+    var cont = $("#messid dl").length;
+    var str = '';
+    $.ajax({
+        url:'__APP__/More/search',
+        type:'get',
+        dataType:'json',
+        data:{
+            q:"<{$q}>",
+            go:cont
+        },
+        success:function(data){
+            var len = data.length;
+            if(len<10){$(".ina_btn a").replaceWith('<a href="javascript:;;");>暂无更多~</a>');}
+            for(var i=0; i<len; i++){
+                str = data[i];
+                $("#messid").append(str);
+            }
+            lazy();
+        }
+    });
+
+}
+</script>
+</body>
+</html>

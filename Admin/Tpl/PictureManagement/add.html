@@ -87,17 +87,17 @@
            $("#file_upload-queue").hide();
         },
         'onUploadSuccess': function (file, data, respone) {
-                if(data == 120){alert('图片尺寸不能小于750*500')}
+                if(data == 120){alert('图片尺寸不能小于1000*400')}
 
             $("#cut_pic").empty();
             $("#cut_pic").html("<img id='cropbox' src='<{$ftp_img_path}>" + data + "' />");
             $("#showpicval").val(data);
             //调用裁剪插件
                 $('#cropbox').Jcrop({
-                    aspectRatio: 3 / 2,
+                    aspectRatio: 5 / 2,
                     onSelect: updateCoords,
-                    minSize:[750,500],
-                    setSelect:[0,0,750,500],
+                    minSize:[1000,400],
+                    setSelect:[0,0,1000,400],
                     onRelease:function(){
                         return;
                     }

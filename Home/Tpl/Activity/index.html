@@ -6,16 +6,75 @@
 <link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/css/170515/index.css">
 </head>
 <body class="ina_f0f0f0">
-<{include file="../Public/head.html"}>
+<div class="ina_top_sq">
+    <div class="ina_silde">
+        <p class="ina_top_left">
+            <a href="http://auto.news18a.com/" title="网通社首页">网通社首页</a><span>|</span>
+            <a href="http://www.news18a.com/app/" target="_self" class="ina_app">下载APP<i class="ina_icon" style="background: rgba(0, 0, 0, 0) url('http://img.news18a.com/image/auto/170216/icon.png') no-repeat scroll 0 0;"></i></a>
+        </p>
+        <p>
+            <a href="http://www.news18a.com/about.php" title="关于网通社">关于网通社</a><span>|</span>
+            <a href="http://www.news18a.com/customers.php" title="合作媒体">合作媒体</a><span>|</span>
+            <a href="http://www.news18a.com/custom.php" title="客户信息">客户信息</a><span>|</span>
+            <a href="http://money.news18a.com" title="财经频道">财经频道</a><span>|</span>
+            <a href="http://www.news18a.com/connect.php" title="联系我们">联系我们</a><span>|</span>
+            <a href="http://auto.news18a.com/news/pay.html" title="网通社独家定制">网通社独家定制</a>
+        </p>
+    </div>
+</div>
+<script src="http://img.news18a.com/js/jquery-1.7.2.min.js"></script>
+<div class="ina_top">
+    <div class="ina_silde">
+        <div class="ina_top_left">
+            <a href="/"><img src="http://img.news18a.com/community/image/logo.png"></a>
+            <a href="/">首页</a>
+            <a href="/index.php/Boutique/index">精华</a>
+            <a href="/index.php/Activity/index" class="cur">活动</a>
+            <a href="/index.php/Index/hot" >热门排行</a>
+        </div>
+        <div class="ina_top_right">
+            <div class="ina_search">
+                <input id="search_con" placeholder="搜索文章标题">
+                <a id="search" href="javascript:;;"><i class="ina_icon"></i></a>
+                <script type="text/javascript">
+                    $(function () {
+                        $("#search").click(function () {
+                            var search_con = encodeURIComponent(encodeURIComponent($("#search_con").val()));
+                            window.location.href = "__APP__/Index/search/q/" + search_con;
+                        });
+
+                    });
+                </script>
+            </div>
+            <{if $smarty.session.user}>
+            <p>
+                <a class="ina_icon ina_top_message" href="__APP__/Ucenter/mynews"><{if $ms_count neq '0'}><i></i><{/if}></a>
+                <span><a href="__APP__/Ucenter/mymess"><{if $smarty.session.user.name}><{$smarty.session.user.name|truncate:12:'...':true}><{else}><{$smarty.session.user.username|truncate:12:'...':true}><{/if}></a></span>
+                <a href="__APP__/Users/loginout">退出</a>
+                <!--<em>|</em>-->
+                <!--<a href="__APP__/Ucenter" class="ina_red">个人中心</a>-->
+            </p>
+
+            <{else}>
+            <p>
+                <a class="ina_denglu" href="__APP__/Users/login">登录</a>
+
+                <a href="__APP__/Users/index">注册</a>
+            </p>
+            <{/if}>
+        </div>
+    </div>
+</div>
 <div class="ina_head ina_jinghua"></div>
 <div class="ina_silde">
     <div class="ina_list ina_hd">
+        <{foreach $list as $kye => $vo}>
         <dl>
             <dd>
-                <h3><a href="#">自己动手做情人节大餐</a></h3>
+                <h3><a href="#"><{$vo.title}></a></h3>
                 <div class="ina_hdzt ina_blue"><i></i>未开始</div>
             </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
+            <dt><a href="#"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$vo.title}>"></a></dt>
             <dd>
                 <div class="ina_list_bottom">
                     <div class="ina_label">
@@ -25,12 +84,13 @@
                 </div>
             </dd>
         </dl>
+        <{/foreach}>
         <dl>
             <dd>
                 <h3><a href="#">自己动手做情人节大餐</a></h3>
                 <div class="ina_hdzt"><i></i>进行中</div>
             </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
+            <dt><a href="#"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="http://img.news18a.com/community/image/list.jpg"></a></dt>
             <dd>
                 <div class="ina_list_bottom">
                     <div class="ina_label">
@@ -43,118 +103,13 @@
         <dl>
             <dd>
                 <h3><a href="#">自己动手做情人节大餐</a></h3>
-                <div class="ina_hdzt"><i></i>进行中</div>
-            </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
-            <dd>
-                <div class="ina_list_bottom">
-                    <div class="ina_label">
-                        <span class="ina_label3">奢侈/享受</span>
-                    </div>
-                    <p><span><i class="ina_icon ina_read"></i>564</span><span><i class="ina_icon ina_message"></i>564</span><span><i class="ina_icon ina_roar"></i>564</span></p>
-                </div>
-            </dd>
-        </dl>
-        <dl>
-            <dd>
-                <h3><a href="#">自己动手做情人节大餐</a></h3>
-                <div class="ina_hdzt"><i></i>进行中</div>
-            </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
-            <dd>
-                <div class="ina_list_bottom">
-                    <div class="ina_label">
-                        <span class="ina_label4">女性/爱美</span>
-                    </div>
-                    <p><span><i class="ina_icon ina_read"></i>564</span><span><i class="ina_icon ina_message"></i>564</span><span><i class="ina_icon ina_roar"></i>564</span></p>
-                </div>
-            </dd>
-        </dl>
-        <dl>
-            <dd>
-                <h3><a href="#">自己动手做情人节大餐</a></h3>
                 <div class="ina_hdzt ina_gray"><i></i>已结束</div>
             </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
+            <dt><a href="#"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="http://img.news18a.com/community/image/list.jpg"></a></dt>
             <dd>
                 <div class="ina_list_bottom">
                     <div class="ina_label">
                         <span class="ina_label5">美食/烹饪</span>
-                    </div>
-                    <p><span><i class="ina_icon ina_read"></i>564</span><span><i class="ina_icon ina_message"></i>564</span><span><i class="ina_icon ina_roar"></i>564</span></p>
-                </div>
-            </dd>
-        </dl>
-        <dl>
-            <dd>
-                <h3><a href="#">自己动手做情人节大餐</a></h3>
-                <div class="ina_hdzt ina_gray"><i></i>已结束</div>
-            </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
-            <dd>
-                <div class="ina_list_bottom">
-                    <div class="ina_label">
-                        <span class="ina_label6">科技/智能</span>
-                    </div>
-                    <p><span><i class="ina_icon ina_read"></i>564</span><span><i class="ina_icon ina_message"></i>564</span><span><i class="ina_icon ina_roar"></i>564</span></p>
-                </div>
-            </dd>
-        </dl>
-        <dl>
-            <dd>
-                <h3><a href="#">自己动手做情人节大餐</a></h3>
-                <div class="ina_hdzt ina_gray"><i></i>已结束</div>
-            </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
-            <dd>
-                <div class="ina_list_bottom">
-                    <div class="ina_label">
-                        <span class="ina_label7">时尚/生活</span>
-                    </div>
-                    <p><span><i class="ina_icon ina_read"></i>564</span><span><i class="ina_icon ina_message"></i>564</span><span><i class="ina_icon ina_roar"></i>564</span></p>
-                </div>
-            </dd>
-        </dl>
-        <dl>
-            <dd>
-                <h3><a href="#">自己动手做情人节大餐</a></h3>
-                <div class="ina_hdzt ina_gray"><i></i>已结束</div>
-            </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
-            <dd>
-                <div class="ina_list_bottom">
-                    <div class="ina_label">
-                        <span class="ina_label8">户外/极限</span>
-                    </div>
-                    <p><span><i class="ina_icon ina_read"></i>564</span><span><i class="ina_icon ina_message"></i>564</span><span><i class="ina_icon ina_roar"></i>564</span></p>
-                </div>
-            </dd>
-        </dl>
-        <dl>
-            <dd>
-                <h3><a href="#">自己动手做情人节大餐</a></h3>
-                <div class="ina_hdzt ina_gray"><i></i>已结束</div>
-            </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
-            <dd>
-                <div class="ina_list_bottom">
-                    <div class="ina_label">
-                        <span class="ina_label9">模型/玩具</span>
-                    </div>
-                    <p><span><i class="ina_icon ina_read"></i>564</span><span><i class="ina_icon ina_message"></i>564</span><span><i class="ina_icon ina_roar"></i>564</span></p>
-                </div>
-            </dd>
-        </dl>
-        <dl>
-            <dd>
-                <h3><a href="#">自己动手做情人节大餐</a></h3>
-                <div class="ina_hdzt ina_gray"><i></i>已结束</div>
-            </dd>
-            <dt><a href="#"><img src="http://img.news18a.com/community/image/list.jpg"></a></dt>
-            <dd>
-                <div class="ina_list_bottom">
-                    <div class="ina_label">
-                        <span class="ina_label2">时尚/生活</span>
                     </div>
                     <p><span><i class="ina_icon ina_read"></i>564</span><span><i class="ina_icon ina_message"></i>564</span><span><i class="ina_icon ina_roar"></i>564</span></p>
                 </div>
@@ -169,5 +124,6 @@
 <div class="ina_fh"><img src="http://img.news18a.com/community/image/170515/fh.png"></div>
 <script src="http://img.news18a.com/js/jquery-1.7.2.min.js"></script>
 <script src="http://img.news18a.com/community/js/public.js"></script>
+<{include file="../Public/foot.html"}>
 </body>
 </html>

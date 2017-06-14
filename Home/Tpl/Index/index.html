@@ -32,7 +32,7 @@
         <div class="ina_hot_bt"><h3><i class="ina_icon"></i>热门活动</h3><a href="#" class="ina_more" style="display: none"><i class="ina_icon"></i></a></div>
         <ul>
             <{foreach $activity as $vo}>
-            <li><a href="__APP__/Index/show/id/<{$vo.id}>" target="_blank"><img src="http://img.news18a.com/community/image/list.jpg" data-original="<{$vo.cover2}>" /></a></li>
+            <li><a href="__APP__/Index/show/id/<{$vo.id}>" target="_blank"><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$vo.cover2}>" /></a></li>
             <{/foreach}>
         </ul>
     </div>
@@ -99,10 +99,10 @@
     });
 
 
-    $(".ina_focus_tab ul li").live('click',function(){
-        //加载图片
+//    $(".ina_focus_tab ul li").live('click',function(){
+//        //加载图片
 //        loadImage();
-    });
+//    });
 
 
 
@@ -114,7 +114,8 @@
                 prev:".ina_prev",
                 next:".ina_next",
                 display:"left",
-                auto:"true"
+                auto:"true",
+                original:"data-original"
             })
         }
     }

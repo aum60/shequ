@@ -1,0 +1,69 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>极趣社区-精华</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="format-detection" content="address=no" />
+<meta name="format-detection" content="date=no" />
+<link rel="stylesheet" type="text/css" href="http://img.news18a.com/community/mobile/css/index_170517.css">
+<script src="http://img.news18a.com/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="ina_head">
+    <a href="__APP__/Index/index" class="ina_prev"><img src="https://img.news18a.com/community/mobile/image/prev.png"></a>
+    <span class="ina_head_bt">精华帖</span>
+</div>
+<div class="ina_daohang">
+    <a href="__APP__/Index/essence"<{if $order==''}>class="ina_cur"<{/if}>>最新发布</a>
+    <a href="__APP__/Index/essence/order/click" <{if $order=='click'}>class="ina_cur"<{/if}>>点击最高</a>
+    <a href="__APP__/Index/essence/order/comment" <{if $order=='comment'}>class="ina_cur"<{/if}>>评论最多</a>
+</div>
+<div class="ina_list"  id="messid">
+    <{foreach $list as $k => $vo}>
+    <{include file="../More/essence.html"}>
+    <{/foreach}>
+</div>
+<{if $count>20}><div class="ina_btn" id="jiazai"><a href="javascript:more('<{$order}>');">点击加载更多<i class="ina_icon"></i></a></div><{/if}>
+<{include file="../Public/footer.html"}>
+<{include file="../Public/right_side.html"}>
+<script>
+
+if($(".ina_fh_top").length>0){
+    $(".ina_fh_top").click(function(){
+        $("html,body").animate({scrollTop:0});
+    })
+}
+</script>
+<script>
+
+    function more(order){
+        var cont = $("#messid dl").length;
+        var str = '';
+        $.ajax({
+            url:'__APP__/More/essence',
+            type:'get',
+            dataType:'json',
+            data:{
+                oder:order,
+                go:cont
+            },
+            success:function(data){
+                var len = data.length;
+                if(len<10){$(".ina_btn a").replaceWith('<a href="javascript:;;");>暂无更多~</a>');}
+                for(var i=0; i<len; i++){
+                    str = data[i];
+                    $("#messid").append(str);
+                }
+                    lazy();
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

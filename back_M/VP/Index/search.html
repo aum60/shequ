@@ -1,0 +1,128 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>极趣社区-搜索</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="format-detection" content="address=no" />
+<meta name="format-detection" content="date=no" />
+<link rel="stylesheet" type="text/css" href="https://img.news18a.com/community/mobile/css/index.css">
+<script src="https://img.news18a.com/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="ina_head">
+    <a href="javascript:fanhui();" class="ina_prev"><img src="https://img.news18a.com/community/mobile/image/pre.png"></a>
+    <span class="ina_head_bt">搜索</span>
+</div>
+<div class="ina_searchnr"><input value="<{$q}>" id="search_con_nav"/><a href="javascript:;"><i class="ina_icon" id="search_nav"></i></a></div>
+<div class="ina_list" id="messid">
+    <{if $list}>
+    <{foreach $list as $k => $vo}>
+    <dl>
+        <a href="__APP__/Index/show/id/<{$vo.id}>">
+            <dt>
+                <img src="<{$vo.cover2}>">
+                <{if $vo.isbest==1}><em><i>精</i></em><{/if}>
+            </dt>
+            <dd>
+                 <h3><{$vo.title}></h3>
+                <!--<h3><{$vo.title|replace:"$q":"<span style='color: red;'>$q</span>"}></h3>-->
+                <div class="ina_label">
+                     <{foreach $vo['class_name'] as $vvv}>
+                    <span class="ina_label<{$vvv.class_num}>"><{$vvv.class_name}></span>
+                    <{/foreach}>
+                </div>
+                <div class="ina_list_bottom">
+                    <div class="ina_photo">
+                        <img src="<{$vo.picture_path}>"><{$vo.username}>
+                    </div>
+                    <p><span><{$vo.addtime}></span></p>
+                </div>
+            </dd>
+        </a>
+    </dl>
+    <{/foreach}>
+   
+    <{else}>
+<div class="ina_search_no">
+    <img src="http://img.news18a.com/community/image/search.png">
+    <p>目前还没有<{if $q}>“<{$q}>”的<{/if}>相关帖子，<br>您可以<a href="http://www.news18a.com/app/download.php">下载APP</a>首发帖子留下历史首创足迹^_^</p>
+</div>
+     <{/if}>
+</div>
+<!-- <div class="ina_btn"><a href="javascript:;">点击加载更多<i class="ina_icon"></i></a></div> -->
+<{if $count>20}> <div class="ina_btn" id="jiazai"><a href="javascript:more();">点击加载更多<i class="ina_icon"></i></a></div><{/if}>
+<div class="ina_footer">
+    <p>
+        <a href="http://play.news18a.com"><i class="ina_icon ina_pc"></i>访问电脑端</a>
+        <a href="http://www.news18a.com/app/download.php"><i class="ina_icon ina_app"></i>下载客户端</a>
+    </p>
+    <p>Copyright © 2003-2017聚众网通(北京)科技有限公司版权所有</p>
+</div>
+<div class="ina_fhtop">
+    <a href="http://www.news18a.com/app/download.php"><span>下载<br>APP</span></a>
+    <a href="javascript:;" class="ina_fh_top"><span>顶部</span></a>
+</div>
+</body>
+<script type="text/javascript">
+
+    if($(".ina_fh_top").length>0){
+        $(".ina_fh_top").click(function(){
+            $("html,body").animate({scrollTop:0});
+        })
+    }
+
+    $(function () {
+        $("#search_nav").click(function () {
+            var search_con_nav = encodeURIComponent(encodeURIComponent($("#search_con_nav").val()));
+            window.location.href = "__APP__/Index/search/q/" + search_con_nav;
+        });
+
+    });
+    function fanhui(){
+        window.history.go(-1);
+    }
+
+    var page = <{$page}>;
+    var keyword=encodeURIComponent('<{$q}>');
+function more(){
+    $.ajax({
+             type: "get",//数据提交的类型（post或者get）
+             url: "__APP__/Index/ajax_more",//数据提交得地址
+             data: {pid:1,p:page,k:keyword},//提交的数据(自定义的一些后台程序需要的参数)
+             dataType: "json",//返回的数据类型
+             success: function(data){//请求成功后返执行的方法（这里处理添加五条的数据 data为处理之后的返回数据）
+                
+                var str = "";
+                page = data.p;
+                $.each(data.list,function(a,b){//循环遍历返回的json数据
+                    //str += "第"+(a+1)+"条数据:" + b;//将json数据拼接成字符串
+                    str='<dl><a href="__APP__/Index/show/id/'+b.id+'"><dt><img src="'+b.cover2+'">';
+                    if (b.isbest==1) {
+                        str+='<em><i>精</i></em>';
+                    };
+                    str+='</dt><dd><h3>'+b.title.replace('<{$q}>','<span style="color: red;"><{$q}></span>')
++'</h3><div class="ina_label">';
+                    $.each(b.class_name,function(k,v){
+                        str+='<span class="ina_label1">'+v.class_name+'</span>';
+                    });
+                    str+='</div><div class="ina_list_bottom"><div class="ina_photo"><img src="'+b.picture_path+'">'+b.username+'</div><p><span>'+b.addtime+'</span></p></div></dd></a></dl>';
+                $("#messid").append(str);
+                });
+                if (data.wu==1) {
+                    var div_jiazai=document.getElementById('jiazai');
+                     div_jiazai.style.display="none";
+                }
+                
+            }
+
+    })
+
+}
+ </script>
+
+</html>

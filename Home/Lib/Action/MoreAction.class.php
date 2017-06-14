@@ -774,7 +774,8 @@ class MoreAction extends CommentAction {
         $n = 0;
         $m = 20;
 
-        $row_list = M('PictureManagement')->where('status=2')->order('addtime desc')->limit(5)->select();
+        $row_list = M('PictureManagement')->where('status=2')->order('addtime desc')->limit(10)->select();
+//        demo($row_list);
         if ($row_list) {
             foreach ($row_list as &$v) {
                 list($date,$name) = explode('/',$v['picture']);
@@ -784,8 +785,16 @@ class MoreAction extends CommentAction {
                 Http::curlDownload($v['cover'],$new_pic);
                 $this->image->open($new_pic);
                 //将图片裁剪为指定比例并保存
-                $this->image->thumb(750,300,3)->save($res_pic);
+                $this->image->thumb(750,300,6)->save($res_pic);
 
+                //图片
+                $ftp_path = $this->ftp_img_path . $date . '/';
+
+                //服务器的文件路径
+//                $aDestination_file[] = $this->ftp_img_path . '/' . $prix . $picname;
+                //本地的的文件路径
+//                $aSource_file[] = $path . '/' . $prix . $picname;
+                $this->ftp_copy_files( $v['cover'], $res_pic, 0, FTP_BINARY);
             }
         }
 
@@ -838,6 +847,48 @@ class MoreAction extends CommentAction {
             $this->image->thumb(600,300,1)->save('/pic/'.$v);
         }
         echo 'ok~';
+    }
+
+
+    public function fRename($dirname){
+        if(!is_dir($dirname)){
+            echo "{$dirname}不是一个有效的目录！";
+            exit();
+        }
+        $handle = opendir($dirname);
+        $i = 1;
+        while(($fn = readdir($handle))!==false){
+
+            if($fn!='.'&&$fn!='..'){
+                echo "<br>将名为：".$fn."\n\r";
+                $curDir = $dirname.'/'.$fn;
+                //位置
+                $wz = strrpos($curDir,'.');
+                $newName = substr($curDir,0,$wz);
+
+                if(is_dir($curDir)){
+                    fRename($curDir);
+                }else{
+                    $path = pathinfo($curDir);
+//                    改成你自己想要的新名字
+//                    $newname = $path['dirname'].'/'.$i.'.'.$path['extension'];
+
+                    //图片裁剪压缩
+                    $this->image->open($curDir);
+                    $this->image->thumb(500,500,1)->save($curDir);
+                    echo "裁剪为:".$curDir."\r\n";
+//                    echo "替换成:".$newName."\r\n";
+//                    rename($curDir,$newName);
+                    $i++;
+                }
+            }
+        }
+    }
+
+    public function del_pic(){
+        $path = $_GET['path'];
+        $this->fRename('/pic');
+        exit;
     }
 
 }

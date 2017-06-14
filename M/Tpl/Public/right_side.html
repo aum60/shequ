@@ -1,4 +1,11 @@
 <div class="ina_fhtop">
-    <a href="http://www.news18a.com/app/download.php"><span>下载<br>APP</span></a>
+    <!--<a href="http://www.news18a.com/app/download.php"><span>下载<br>APP</span></a>-->
     <a href="javascript:;" class="ina_fh_top"><span>顶部</span></a>
 </div>
+<script>
+    if($(".ina_fh_top").length>0){
+        $(".ina_fh_top").click(function(){
+            $("html,body").animate({scrollTop:0});
+        })
+    }
+</script>

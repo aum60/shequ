@@ -34,38 +34,16 @@
             <div class="ina_rightbt">
                 <h3>推荐热门活动：</h3>
             </div>
+            <{foreach $activity as $v}>
             <dl>
-                <a href="#">
-                    <dt><img src="http://img2.news18a.com/site/other/201703/ina_14883270101083114198.jpg"></dt>
+                <a href="__APP__/Index/show/id/<{$v.id}>">
+                    <dt><img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$v.cover2}>"></dt>
                     <dd>
-                        <h3>阿斯顿马丁DB11提车，感受速度与激情！</h3>
+                        <h3><{$v.title}></h3>
                     </dd>
                 </a>
             </dl>
-            <dl>
-                <a href="#">
-                    <dt><img src="http://img2.news18a.com/site/other/201703/ina_14883270101083114198.jpg"></dt>
-                    <dd>
-                        <h3>阿斯顿马丁DB11提车，感受速度与激情！</h3>
-                    </dd>
-                </a>
-            </dl>
-            <dl>
-                <a href="#">
-                    <dt><img src="http://img2.news18a.com/site/other/201703/ina_14883270101083114198.jpg"></dt>
-                    <dd>
-                        <h3>阿斯顿马丁DB11提车，感受速度与激情！</h3>
-                    </dd>
-                </a>
-            </dl>
-            <dl>
-                <a href="#">
-                    <dt><img src="http://img2.news18a.com/site/other/201703/ina_14883270101083114198.jpg"></dt>
-                    <dd>
-                        <h3>阿斯顿马丁DB11提车，感受速度与激情！</h3>
-                    </dd>
-                </a>
-            </dl>
+            <{/foreach}>
             <div class="ina_more" style="display: none"><a href="javascript:;;">查看全部</a></div>
         </div>
     </div>
@@ -181,5 +159,6 @@
         }
     }
 </script>
+<{include file="../Public/foot.html"}>
 </body>
 </html>

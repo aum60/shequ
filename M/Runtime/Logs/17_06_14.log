@@ -1,0 +1,1737 @@
+[ 2017-06-14T13:27:47+08:00 ] 192.168.0.197 /m.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.056003s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `bbs_picture_management` [ RunTime:0.047003s ]
+SQL: SELECT * FROM `bbs_picture_management` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.039002s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( `id` IN ('830','2061','522','1413','1750','1914') ) AND ( `status` = 1 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.018001s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( status = 1 and isbest = 1 ) ORDER BY addtime desc LIMIT 20   [ RunTime:0.065004s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.048003s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.017001s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.033002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2211 ) LIMIT 1   [ RunTime:0.051003s ]
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.009001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2211 ) LIMIT 1   [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2162 ) LIMIT 1   [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2162 ) LIMIT 1   [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9619 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2161 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2161 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9794 ) LIMIT 1   [ RunTime:0.012001s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2158 ) LIMIT 1   [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2158 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9747 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2164 ) LIMIT 1   [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2164 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=999 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2152 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2152 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9836 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2150 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2150 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9836 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2141 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2141 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9613 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2146 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2146 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.013000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2137 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2137 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=8695 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2144 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2144 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2143 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2143 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9796 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2142 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2142 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9920 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2135 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2135 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10276 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2134 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2134 ) LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10276 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2103 ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2103 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1999 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1999 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2104 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2104 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\af8928b0808767bc371ee395041ba5fb3c6da44b.file.index.html.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\af8928b0808767bc371ee395041ba5fb3c6da44b.file.index.html.php 第 134 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.288016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.289016s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.009000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.005000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.003001s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.011001s ]
+INFO: [ view_end ] --END-- [ RunTime:0.013001s ]
+
+[ 2017-06-14T13:27:51+08:00 ] 192.168.0.197 /m.php/Index/hot/time/week
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.056004s ]
+INFO: [ route_check ] --END-- [ RunTime:0.058004s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.008000s ]
+SQL: select * from bbs_message as a where 1  and a.addtime >= 1496764800 and status=1 order by show_scan desc limit 10; [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.001001s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `bbs_reply` [ RunTime:0.004001s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `bbs_reply`
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,5, ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '5, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,5, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9634 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,3,999, ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,999, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,3,999, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9619 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,6, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '6, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,6, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4037 ) LIMIT 1   [ RunTime:0.018001s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.002001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9796 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,3, ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,3, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,6, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '6, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,6, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Undefined index: col D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 55 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.751043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.751043s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002001s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-14T13:28:03+08:00 ] 192.168.0.197 /m.php/Index/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_picture_management` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `bbs_picture_management` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( `id` IN ('830','2061','522','1413','1750','1914') ) AND ( `status` = 1 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( status = 1 and isbest = 1 ) ORDER BY addtime desc LIMIT 20   [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2211 ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2211 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2162 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2162 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9619 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2161 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2161 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9794 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2158 ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9747 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2164 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2164 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=999 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2152 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2152 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9836 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2150 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2150 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9836 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2141 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2141 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9613 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2146 ) LIMIT 1   [ RunTime:0.002001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2146 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2137 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2137 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=8695 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2144 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2144 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2143 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2143 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9796 ) LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2142 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2142 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9920 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2135 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2135 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10276 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2134 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2134 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10276 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2103 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2103 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1999 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1999 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 444 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2104 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2104 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\af8928b0808767bc371ee395041ba5fb3c6da44b.file.index.html.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\af8928b0808767bc371ee395041ba5fb3c6da44b.file.index.html.php 第 134 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-14T13:32:17+08:00 ] 192.168.0.197 /m.php/Index/hot/time/week
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.004000s ]
+SQL: select * from bbs_message as a where 1  and a.addtime >= 1496764800 and status=1 order by show_scan desc limit 10; [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.001001s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `bbs_reply` [ RunTime:0.003000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `bbs_reply`
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,5, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '5, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,5, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9634 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,3,999, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3,999, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,3,999, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9619 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,6, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '6, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,6, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4037 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9796 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '8, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,8, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,3, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,3, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=,6, ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '6, ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `bbs_cat` WHERE ( id=,6, ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 50 行.
+NOTIC: [8] Undefined index: col D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 55 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 55 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-06-14T13:49:19+08:00 ] 192.168.0.197 /m.php/Index/hot/time/week
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.002000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.003000s ]
+SQL: select * from bbs_message as a where 1  and a.addtime >= 1496764800 and status=1 order by show_scan desc limit 10; [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `bbs_reply` [ RunTime:0.004001s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `bbs_reply`
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','5','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9634 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','3','999','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9619 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','6','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4037 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.002001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9796 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','3','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','6','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.002001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: col D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 53 行.
+NOTIC: [2] filemtime(): stat failed for ./M/Runtime/Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php D:\pro\shequ\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./M/Runtime/Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php): No such file or directory D:\pro\shequ\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.556032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.556032s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002001s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-14T13:49:20+08:00 ] 192.168.0.197 /m.php/Index/hot/time/index.js.map
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.003000s ]
+SQL: select * from bbs_message as a where 1  and a.addtime >= 1496764800 and status=1 order by show_scan desc limit 10; [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `bbs_reply` [ RunTime:0.003000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `bbs_reply`
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','5','') ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.006001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9634 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','3','999','') ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9619 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','6','') ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4037 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9796 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','3','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','6','') ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: col D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 53 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+NOTIC: [2] Illegal string offset 'class_num' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 51 行.
+NOTIC: [2] Illegal string offset 'class_name' D:\pro\shequ\M\Runtime\Cache\bd882dfbc33563a8588fdbed4dca981094409839.file.hot.html.php 第 52 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-14T13:49:54+08:00 ] 192.168.0.197 /m.php/Index/hot/time/week
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.004000s ]
+SQL: select * from bbs_message as a where 1  and a.addtime >= 1496764800 and status=1 order by show_scan desc limit 10; [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2017-06-14T13:49:55+08:00 ] 192.168.0.197 /m.php/Index/hot/time/index.js.map
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.003000s ]
+SQL: select * from bbs_message as a where 1  and a.addtime >= 1496764800 and status=1 order by show_scan desc limit 10; [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( `id` IN ('','8','') ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2017-06-14T13:55:01+08:00 ] 192.168.0.197 /m.php/Index/hot/time/week
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.003001s ]
+SQL: select * from bbs_message as a where 1  and a.addtime >= 1496764800 and status=1 order by show_scan desc limit 10; [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `bbs_reply` [ RunTime:0.003001s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `bbs_reply`
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9634 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=999 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9619 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4037 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9796 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: col D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 53 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-14T13:55:02+08:00 ] 192.168.0.197 /m.php/Index/hot/time/index.js.map
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.003001s ]
+SQL: select * from bbs_message as a where 1  and a.addtime >= 1496764800 and status=1 order by show_scan desc limit 10; [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `bbs_reply` [ RunTime:0.003000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `bbs_reply`
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2105 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2105 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2148 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9634 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=999 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.002001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2068 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2068 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2139 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9619 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2083 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2083 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4037 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2061 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2061 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2080 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2080 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9796 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2082 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2082 ) LIMIT 1   [ RunTime:0.001001s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 93 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 95 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 97 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2067 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2067 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.001000s ]
+ERR: 1146:Table 'cms.bbs_reply' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `bbs_reply` WHERE ( mid=2019 ) LIMIT 1  
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2019 ) LIMIT 1   [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 48 行.
+NOTIC: [8] Undefined index: col D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 53 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\7614319f1078aa47d84c6e80ed03e5e05271b42a.file.hot.html.php 第 53 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-14T15:29:05+08:00 ] 192.168.0.197 /m.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_picture_management` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `bbs_picture_management` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( `id` IN ('830','2061','522','1413','1750','1914') ) AND ( `status` = 1 ) ORDER BY addtime desc LIMIT 4   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( status = 1 and isbest = 1 ) ORDER BY addtime desc LIMIT 20   [ RunTime:0.005001s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2211 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2211 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2162 ) LIMIT 1   [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2162 ) LIMIT 1   [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9619 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2161 ) LIMIT 1   [ RunTime:0.006000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2161 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9794 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2158 ) LIMIT 1   [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2158 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9747 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2164 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2164 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=999 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2152 ) LIMIT 1   [ RunTime:0.002001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2152 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9836 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2150 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2150 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2148 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9836 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2141 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2141 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9613 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2146 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2146 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2137 ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2137 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=8695 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2144 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2144 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9622 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2143 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2143 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9796 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2142 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2142 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2139 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9920 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2135 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2135 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10276 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2134 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2134 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10276 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=8 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2103 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2103 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=4049 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=6 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1999 ) LIMIT 1   [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1999 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=10042 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=2104 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2104 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: pid D:\pro\shequ\M\Runtime\Cache\af8928b0808767bc371ee395041ba5fb3c6da44b.file.index.html.php 第 134 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\af8928b0808767bc371ee395041ba5fb3c6da44b.file.index.html.php 第 134 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.228013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.228013s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-06-14T15:29:26+08:00 ] 192.168.0.197 /m.php/Index/show/id/2211
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( id=2211 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: view_record D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 232 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.010001s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.005001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid= 2211 ) LIMIT 1   [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2211 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: select b.*,t.num from  bbs_comm as b left JOIN (SELECT count(*) as num,commid FROM bbs_comm_give GROUP BY commid) as t on t.commid=b.id where b.mid=2211 ORDER BY t.num DESC LIMIT 3; [ RunTime:0.025001s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9494 ) LIMIT 1   [ RunTime:0.009001s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9492 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9496 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: select a.* from  bbs_message as a left JOIN (SELECT count(*) as num,mid FROM bbs_comm GROUP BY mid) as t on t.mid=a.id where a.status=1 and a.isbest=1 and a.id !=2211 and a.pid like '%,5,%' order by t.num desc limit 4 [ RunTime:0.024002s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1472 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1472 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9794 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1464 ) LIMIT 1   [ RunTime:0.008000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1464 ) LIMIT 1   [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9751 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1478 ) LIMIT 1   [ RunTime:0.007001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1478 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9920 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1574 ) LIMIT 1   [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1574 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-06-14T15:29:26+08:00 ] 192.168.0.197 /m.php/Index/show/id/index.js.map
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.006000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 302 行.
+NOTIC: [8] Undefined variable: list D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 303 行.
+NOTIC: [8] Undefined variable: tjmess D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 304 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: comments D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 88 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-06-14T15:32:47+08:00 ] 192.168.0.197 /m.php/Index/show/id/2211
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( id=2211 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.003001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid= 2211 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.004000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2211 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: select b.*,t.num from  bbs_comm as b left JOIN (SELECT count(*) as num,commid FROM bbs_comm_give GROUP BY commid) as t on t.commid=b.id where b.mid=2211 ORDER BY t.num DESC LIMIT 3; [ RunTime:0.007001s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9494 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9492 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9496 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: select a.* from  bbs_message as a left JOIN (SELECT count(*) as num,mid FROM bbs_comm GROUP BY mid) as t on t.mid=a.id where a.status=1 and a.isbest=1 and a.id !=2211 and a.pid like '%,5,%' order by t.num desc limit 4 [ RunTime:0.016001s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1472 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1472 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9794 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1464 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1464 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9751 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1478 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1478 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9920 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1574 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1574 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: vo D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 155 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 155 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.738042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.740042s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-06-14T15:32:47+08:00 ] 192.168.0.197 /m.php/Index/show/id/index.js.map
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 302 行.
+NOTIC: [8] Undefined variable: list D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 303 行.
+NOTIC: [8] Undefined variable: tjmess D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 304 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: comments D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 88 行.
+NOTIC: [8] Undefined index: vo D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 155 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 155 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001001s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-14T15:34:26+08:00 ] 192.168.0.197 /m.php/Index/show/id/2211
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.003000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( id=2211 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cms_app_user` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid= 2211 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `bbs_message_give` [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=2211 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: select b.*,t.num from  bbs_comm as b left JOIN (SELECT count(*) as num,commid FROM bbs_comm_give GROUP BY commid) as t on t.commid=b.id where b.mid=2211 ORDER BY t.num DESC LIMIT 3; [ RunTime:0.005000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9494 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9492 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9496 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: select a.* from  bbs_message as a left JOIN (SELECT count(*) as num,mid FROM bbs_comm GROUP BY mid) as t on t.mid=a.id where a.status=1 and a.isbest=1 and a.id !=2211 and a.pid like '%,5,%' order by t.num desc limit 4 [ RunTime:0.016001s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9618 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1472 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1472 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9794 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1464 ) LIMIT 1   [ RunTime:0.004001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1464 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9751 ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: birthday D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 24 行.
+NOTIC: [8] Undefined index: interest D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 26 行.
+NOTIC: [8] Undefined index: constellation D:\pro\shequ\M\Lib\Model\UsersModel.class.php 第 28 行.
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1478 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1478 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 457 行.
+SQL: SELECT * FROM `cms_app_user` WHERE ( id=9920 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_cat` WHERE ( id=5 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=1574 ) LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message_give` WHERE ( mid=1574 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.740042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.741042s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-14T15:34:26+08:00 ] 192.168.0.197 /m.php/Index/show/id/index.js.map
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: user D:\pro\shequ\M\Lib\Action\CommentAction.class.php 第 612 行.
+SQL: SHOW COLUMNS FROM `bbs_cat` [ RunTime:0.004000s ]
+SQL: SELECT `id`,`name` FROM `bbs_cat`  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 302 行.
+NOTIC: [8] Undefined variable: list D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 303 行.
+NOTIC: [8] Undefined variable: tjmess D:\pro\shequ\M\Lib\Action\IndexAction.class.php 第 304 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: comments D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object D:\pro\shequ\M\Runtime\Cache\49ba0049d77c30417b5b7265bcb002641d7564e1.file.show.html.php 第 88 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+

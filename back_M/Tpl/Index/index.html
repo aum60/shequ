@@ -1,0 +1,103 @@
+<{include file="../Public/head.html"}>
+<body>
+<{include file="../Public/search.html"}>
+<div class="ina_focus">
+    <div class="ina_focus_nr" id="ina_focus">
+        <div class="ina_bd">
+            <ul>
+                <{foreach $row_list as $v}>
+                <li><a href="<{$v.message_link}>"><img data-original="<{$v.cover}>" src="http://img.news18a.com/community/image/lazyload_1000_400.jpg" alt="<{$v.title}>"><span><{$v.title}></span></a></li>
+                <{/foreach}>
+            </ul>
+        </div>
+        <div class="ina_hd">
+            <ul></ul>
+        </div>
+    </div>
+</div>
+<div class="ina_hot">
+    <div class="ina_hotbt"><h3>热门活动</h3></div>
+    <div class="ina_hotnr">
+        <a href="#"><img src="http://img.news18a.com/community/20170419/x_s_58f71c3a00699.jpg"></a>
+        <a href="#"><img src="http://img.news18a.com/community/20170419/x_s_58f71c3a00699.jpg"></a>
+        <a href="#"><img src="http://img.news18a.com/community/20170419/x_s_58f71c3a00699.jpg"></a>
+        <a href="#"><img src="http://img.news18a.com/community/20170419/x_s_58f71c3a00699.jpg"></a>
+        <a href="#"><img src="http://img.news18a.com/community/20170419/x_s_58f71c3a00699.jpg"></a>
+    </div>
+</div>
+<div class="ina_sydaohang">
+    <a href="__APP__/Index/index" class="ina_cur">精华</a>
+    <a href="__APP__/Index/hot/time/week">热门排行</a>
+    <{foreach $cat as $vv}>
+    <a href="__APP__/Index/column/pid/<{$vv.id}>"><{$vv.name}></a>
+    <{/foreach}>
+</div>
+<div class="ina_list" id="messid">
+    <{foreach $message as $k => $vo}>
+    <{include file="../More/index.html"}>
+    <{/foreach}>
+</div>
+<div class="ina_btn ina_backgroundno" id="jiazai"><a href="javascript:more();">点击加载更多<i class="ina_icon"></i></a></div>
+<{include file="../Public/footer.html"}>
+<{include file="../Public/right_side.html"}>
+<script type="text/javascript" src='http://img.news18a.com/3g/js/TouchSlide.1.1.js'></script>
+<script>
+
+TouchSlide({
+    slideCell:"#ina_focus",
+    titCell:".ina_hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+    mainCell:".ina_bd ul",
+    effect:"leftLoop",
+    autoPlay:true,//自动播放
+    interTime:5000,//5秒间隔切换
+    autoPage:true, //自动分页
+    width:750,
+    height:300,
+    switchLoad:"data-original"
+})
+if($(".ina_fh_top").length>0){
+    $(".ina_fh_top").click(function(){
+        $("html,body").animate({scrollTop:0});
+    })
+}
+
+</script>
+<script>
+
+    function more(){
+                var cont = $("#messid dl").length;
+                var str = '';
+                $.ajax({
+                    url:'__APP__/More/index',
+                    type:'get',
+                    dataType:'json',
+                    data:{
+//                        pid:"<{$pid}>",
+                        go:cont
+                    },
+                    success:function(data){
+                        var len = data.length;
+                        if(len<10){$(".ina_btn a").replaceWith('<a href="javascript:;;");>暂无更多~</a>');}
+                        for(var i=0; i<len; i++){
+                            str = data[i];
+                            $("#messid").append(str);
+                        }
+                            lazy();
+                    }
+                });
+    }
+
+    function sousuo(){
+        var search_con = encodeURIComponent(encodeURIComponent($("#search_con").val()));
+        if (search_con=='') {
+            alert('请输入文章标题');
+            return;
+        }else{
+            window.location.href = "__APP__/Index/search/q/" + search_con;
+        }
+    }
+
+
+</script>
+</body>
+</html>

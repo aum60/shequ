@@ -1,0 +1,167 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>极趣社区-文章详情</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="format-detection" content="address=no" />
+<meta name="format-detection" content="date=no" />
+<link rel="stylesheet" type="text/css" href="https://img.news18a.com/community/mobile/css/index.css">
+<script src="https://img.news18a.com/js/jquery-1.7.2.min.js"></script>
+
+        <style>
+            .wrap{word-break:break-all;}
+        </style>
+
+</head>
+
+<body>
+<div class="ina_head">
+    <a href="javascript:fanhui();" class="ina_prev"><img src="https://img.news18a.com/community/mobile/image/pre.png"></a>
+    <span class="ina_head_bt">正文</span>
+    <a href="javascript:;" class="ina_share"><i class="ina_icon"></i></a>
+</div>
+<div class="ina_newsbt">
+    
+    <h3><{$list.title}></h3>
+    <div class="ina_label">
+       <{foreach $list['class_name'] as $vvv}>
+            <span class="ina_label<{$vvv.class_num}>"><{$vvv.class_name}></span>
+        <{/foreach}>
+    </div>
+    <p><span><i class="ina_icon ina_read"></i><{$list.pageView}></span><span><i class="ina_icon ina_message"></i><{$list.pl_num}></span><span></p>
+    <dl>
+        <dt><img src="<{$list.picture_path}>"><{if $list.sex==1 || $list.sex==''}><i class="ina_icon ina_man"></i><{else}><i class="ina_icon ina_women"></i><{/if}></dt>
+        <dd>
+            <span><{$list.username}></span>
+            <p><{$list.addtime}></p>
+        </dd>
+        <div class="ina_jing"></div>
+    </dl>
+</div>
+<div class="ina_silde">
+    <{$list.content}>
+</div>
+<div class="ina_comment">
+    <div class="ina_bt"><i class="ina_icon"></i>精彩评论</div>
+    <{foreach $comments as $com}>
+    <{if $com.id_path == ''}>
+    <dl>
+        <dt><img src="<{$com.tx}>"></dt>
+        <dd>
+            <div class="ina_comment_top">
+                <h3><{$com.user}></h3>
+                <span><{$com.sj}></span>
+                <!--<p>7楼</p>-->
+            </div>
+            <div class="ina_comment_bottom wrap"><{$com.content}></div>
+            <{if $com.len > 100}>
+            <div class="ina_zhankai">展开评论</div>
+            <{/if}>
+            <div class="ina_zan"><i class="ina_icon"></i><{$com.num}></div>
+        </dd>
+    </dl>
+    <{else}>
+    <dl>
+        <dt><img src="<{$com.tx}>"></dt>
+        <dd>
+            <div class="ina_comment_top">
+                <h3><{$com.user}></h3>
+                <span><{$com.sj}></span>
+                <!--<p>5楼</p>-->
+            </div>
+            <ul>
+                <li>
+                    <div class="ina_ypl">
+                        <span>原评论：<b><{$com.parent_user}></b></span>
+                        <!--<p>5楼</p>-->
+                    </div>
+                    <div class="ina_comment_bottom wrap"><{$com.parent_content}></div>
+                    <{if $com.parent_len > 100}>
+                    <div class="ina_zhankai">展开评论</div>
+                    <{/if}>
+                </li>
+            </ul>
+            <div class="ina_comment_bottom wrap"><{$com.content}></div>
+            <{if $com.len > 100}>
+            <div class="ina_zhankai">展开评论</div>
+            <{/if}>
+            <div class="ina_zan"><i class="ina_icon"></i><{$com.num}></div>
+        </dd>
+    </dl>
+    <{/if}>
+    <{/foreach}>
+    <div class="ina_plbtn"><a href="http://www.news18a.com/app/download.php">查看更多评论，请下载大料汽车app</a></div>
+</div>
+
+<div class="ina_list ina_tjread">
+    <div class="ina_bt"><i class="ina_icon"></i>推荐阅读</div>
+     <{foreach $tjmess as $k => $vo}>
+    <dl>
+        <a href="__APP__/Index/show/id/<{$vo.id}>">
+            <dt>
+                <img src="<{$vo.cover2}>">
+                 <{if $vo.isbest==1}><em><i>精</i></em><{/if}>
+            </dt>
+            <dd>
+                <h3><{$vo.title}></h3>
+                <div class="ina_list_bottom">
+                    <div class="ina_photo">
+                        <img src="<{$vo.picture_path}>"><{$vo.username}>
+                    </div>
+                    <p><span><i class="ina_icon ina_read"></i><{$vo.scan}></span></p>
+                </div>
+            </dd>
+        </a>
+    </dl>
+    <{/foreach}>
+</div>
+<div class="ina_footer">
+    <p>
+        <a href="http://play.news18a.com"><i class="ina_icon ina_pc"></i>访问电脑端</a>
+        <a href="http://www.news18a.com/app/download.php"><i class="ina_icon ina_app"></i>下载客户端</a>
+    </p>
+    <p>Copyright © 2003-2017聚众网通(北京)科技有限公司版权所有</p>
+</div>
+<div class="ina_fhtop">
+    <a href="http://www.news18a.com/app/download.php"><span>下载<br>APP</span></a>
+    <a href="javascript:;" class="ina_fh_top"><span>顶部</span></a>
+</div>
+<script>
+
+if($(".ina_fh_top").length>0){
+    $(".ina_fh_top").click(function(){
+        $("html,body").animate({scrollTop:0});
+    })
+}
+if($(".ina_zhankai").length>0){
+    $(".ina_zhankai").click(function(){
+        $(this).siblings('.ina_comment_bottom').css({maxHeight:"none"});
+        $(this).remove();
+    })
+}
+if($(".ina_share").length>0){
+    $(".ina_share").click(function(){
+        $("body").append("<div class='ina_zhezhao'><img src='https://img.news18a.com/community/mobile/image/bg.png' onclick='$(this).parents(\".ina_zhezhao\").remove();'></div>");
+    })
+}
+
+function fanhui(){
+        window.history.go(-1);
+    }
+
+
+    // var oP = document.getElementById('demoP');
+    // var oBtn = document.getElementById('demoBtn');
+    // var allContent = oP.innerHTML;                   //存放所有内容
+    // oP.innerHTML = oP.innerHTML.substr(0,100);        //截取前100个字符
+    // oBtn.onclick=function(){
+    //     oP.innerHTML = allContent;                    //显示所有内容
+    // }
+</script>
+</body>
+</html>

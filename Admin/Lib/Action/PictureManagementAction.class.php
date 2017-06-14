@@ -306,7 +306,7 @@ class PictureManagementAction extends CommonAction {
         $limit = array();
         $imgSize = getimagesize($_FILES['Filedata']['tmp_name']);
         $limit['width'] = 1000;
-        $limit['height'] = 500;
+        $limit['height'] = 400;
         if($imgSize[0] < '750'){
             echo 120;
             return false;
@@ -314,7 +314,7 @@ class PictureManagementAction extends CommonAction {
 
         $sizeproportion = intval($_POST['sizeproportion']);
         if ($sizeproportion == 1) {
-            $w = 750;
+            $w = 1000;
         } else if ($sizeproportion == 2) {
             $w = 900;
         } else if ($sizeproportion == 3) {
@@ -454,8 +454,8 @@ class PictureManagementAction extends CommonAction {
         $h = intval($height / $width * $w);
         $sizeproportion = intval($_POST['sizeproportion']);
         if ($sizeproportion == 1) {
-            if ($h < 500) {
-                $h = 500;
+            if ($h < 400) {
+                $h = 400;
             }
         } else if ($sizeproportion == 2) {
             if ($h < 500) {

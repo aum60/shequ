@@ -43,7 +43,7 @@
                 <div class="ina_date"><i class="ina_icon"></i><{$vo.addtime}></div>
             </dd>
             <dt>
-                <img src="http://img.news18a.com/community/image/lazyload_324.jpg" data-original="<{$vo.cover2}>">
+                <img src="http://img.news18a.com/community/image/lazyload_1000.jpg" data-original="<{$vo.cover2}>">
                 <{if $vo.isbest==1}><em><i>精</i></em><{/if}>
                 <p><{$vo.title}></p>
             </dt>
@@ -65,25 +65,6 @@
 <{include file="../Public/footer.html"}>
 <{include file="../Public/right_side.html"}>
 <script>
-
-if($(".ina_fh_top").length>0){
-    $(".ina_fh_top").click(function(){
-        $("html,body").animate({scrollTop:0});
-    })
-}
-(function(){
-    var _top=$(".ina_sydaohang").offset().top;
-    $(window).scroll(function(){
-        if($(window).scrollTop()>=_top){
-            $(".ina_sydaohang").css({position:"fixed",top:"0",left:"0",zIndex:999});
-            $(".ina_sydaohang").next().css({paddingTop:$(".ina_sydaohang").height()+12});
-        }
-        else{
-            $(".ina_sydaohang").css({position:"static"});
-            $(".ina_sydaohang").next().css({paddingTop:0});
-        }
-    })
-})();
 
 function sousuo(){
     var search_con = encodeURIComponent(encodeURIComponent($("#search_con").val()));

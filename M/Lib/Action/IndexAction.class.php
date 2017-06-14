@@ -20,6 +20,20 @@ class IndexAction extends CommentAction {
 
     //首页
     public function index() {
+        $IDs = array(
+            '830',
+            '2061',
+            '522',
+            '1413',
+            '1750',
+            '1914',
+        );
+
+        //最新贴
+        $where =array();
+        $where['id'] = array('in',$IDs);
+        $where['status'] = '1';
+
        $row_list = M('PictureManagement')->where('status=2')->order('addtime desc')->limit(5)->select();
         if ($row_list) {
             foreach ($row_list as &$v) {
@@ -32,7 +46,22 @@ class IndexAction extends CommentAction {
             }
         }
 
+        //首页活动
+        $activity = M('Message')->where($where)->limit(4)->order('addtime desc')->select();
+        foreach ($activity as &$vo) {
+            //计算时间差
+            $vo['addtime'] = $this->get_time_Company($vo['addtime']);
 
+
+            //头像显示
+
+            $vo['cover'] = $this->ftp_img_path . $vo['cover'];
+
+            $vo['cover2'] = $this->ftp_img_path . $vo['cover2'];
+
+        }
+
+        $this->assign('activity', $activity);
         $this->assign('row_list',$row_list);
         $message = M('Message')->where('status = 1 and isbest = 1')->order('addtime desc')->limit(20)->select();
         $message=$this->getAllData($message);
@@ -42,6 +71,7 @@ class IndexAction extends CommentAction {
         $this->assign('message',$message);
         $this->display();
     }
+
     //精华
     public function essence(){
         $order = $_GET['order'];
@@ -112,9 +142,22 @@ class IndexAction extends CommentAction {
             $vo['cover'] = $this->ftp_img_path . $vo['cover'];
             $vo['cover2'] = $this->ftp_img_path . $vo['cover2'];
             //查询栏目信息
-            $class_info = M('Cat')->where('id=' . $vo['pid'])->find();
-            $vo['class_name'] = $class_info['name'];
-            $vo['class_num'] = $class_info['class'];
+            $class_name = array();
+            if ($vo['pid']) {
+                $pid_str = substr($vo['pid'], 1, -1);
+                $pid_str_array = explode(',', $pid_str);
+                if ($pid_str_array) {
+                    foreach ($pid_str_array as $kkk => $vvv) {
+                        //查询栏目信息
+                        $class_info = M('Cat')->where('id=' . $vvv)->find();
+                        $class_name[$kkk]['class_name'] = $class_info['name'];
+                        $class_name[$kkk]['class_num'] = $class_info['class'];
+                    }
+                }
+            }
+
+            $vo['class_name'] = $class_name;
+
             //查询评论
             $p = M('Comm')->where('mid=' . $vo['id'])->count();
             $c = M('Reply')->where('mid=' . $vo['id'])->count();
@@ -428,10 +471,9 @@ class IndexAction extends CommentAction {
             if (empty($vo['cover2'])) {
                 $vo['cover2']="http://img.news18a.com/community/image/lazyload_750.jpg";
             }else{
-                list($date, $pic_name) = explode('/',$vo['cover2']);
+//                list($date, $pic_name) = explode('/',$vo['cover2']);
                 $vo['cover2'] = $this->ftp_img_path . $vo['cover2'];
-                $vo['cover3'] = '/pic/'.$pic_name;
-                $vo['cover4'] = '/pic_3/'.$pic_name;
+
             }
             
             
